@@ -16,7 +16,7 @@
   });
 
   function playIntro() {
-    var introTiming = 8999;
+    var introTiming = 8000;
 
     introEl.classList.remove('dn');
     mainEl.classList.add('dn');

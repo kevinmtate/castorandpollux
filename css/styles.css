@@ -1,3 +1,8 @@
+#introContainer {
+  background-image: url('../media/giphy-downsized-large.gif');
+  background-size: 100% 100%;
+}
+
 main {
   position: relative;
 }
