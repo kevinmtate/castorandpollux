@@ -1,0 +1,20 @@
+main {
+  position: relative;
+}
+
+#stars {
+  /* background: linear-gradient(90deg, rgba(9,11,18,1) 0%, rgba(18,25,35,1) 50%, rgba(9,11,18,1) 100%); */
+  background: black;
+  height: 5000px;
+  position: fixed;
+  z-index: -1;
+}
+
+#container {
+  height: 5000px;
+  width: 100%;
+}
+
+.mbAlot {
+  margin-bottom: 32rem;
+}
