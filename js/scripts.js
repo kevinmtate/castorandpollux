@@ -1,21 +1,24 @@
 (function() {
 
-  var starsEl = document.getElementById('stars');
-  var introEl = document.getElementById('intro');
-  var mainEl = document.querySelector('main');
+  var intro = true;
 
   document.addEventListener('DOMContentLoaded', function() {
-    var intro = true;
-
     if (intro) {
       playIntro();
     } 
     else {
       init();
     }
+
+    var navEl = document.getElementById('nav');
+    navEl.addEventListener('click', function() {
+      console.log('nav click');
+    })
   });
 
   function playIntro() {
+    var introEl = document.getElementById('intro');
+    var mainEl = document.getElementById('mainContainer');
     var introTiming = 8000;
 
     introEl.classList.remove('dn');
@@ -33,6 +36,7 @@
   }
   
   function initStars() {
+    var starsEl = document.getElementById('stars');
     var scrollSpeed = 1;
     var numOfStars = starsEl.offsetHeight / 3;
 
@@ -52,6 +56,7 @@
   }
   
   function createStar() {
+    var starsEl = document.getElementById('stars');
     var star = document.createElement('div');
     var maxY = starsEl.offsetHeight;
     var maxX = starsEl.offsetWidth;

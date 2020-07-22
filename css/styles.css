@@ -3,6 +3,32 @@
   background-size: 100% 100%;
 }
 
+header {
+  z-index: 100;
+}
+
+nav {
+  cursor: pointer;
+  left: 50px;
+  position: fixed;
+  top: 30px;
+  z-index: 999;
+}
+
+nav div {
+  background-color: white;
+  height: 3px;
+  width: 50px;
+}
+
+nav div:first-child {
+  margin-bottom: 10px;
+}
+
+nav div:last-child {
+  margin-top: 10px;
+}
+
 main {
   position: relative;
 }
