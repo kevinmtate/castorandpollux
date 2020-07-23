@@ -1,6 +1,6 @@
 (function() {
 
-  var intro = true;
+  var intro = false;
 
   document.addEventListener('DOMContentLoaded', function() {
     if (intro) {
@@ -9,11 +9,6 @@
     else {
       init();
     }
-
-    var navEl = document.getElementById('nav');
-    navEl.addEventListener('click', function() {
-      console.log('nav click');
-    })
   });
 
   function playIntro() {
@@ -33,6 +28,7 @@
 
   function init() {
     initStars();
+    initHamburger();
   }
   
   function initStars() {
@@ -52,6 +48,20 @@
         starsEl.style.top = parseInt(stars.style.top) + scrollSpeed + 'px';
       }
       prevYOffset = window.pageYOffset;
+    });
+  }
+
+  function initHamburger() {
+    var hamburgerNav = document.getElementById('hamburgerNav')
+    var firstLine = hamburgerNav.querySelector('.firstLine');
+    var middleLine = hamburgerNav.querySelector('.middleLine');
+    var lastLine = hamburgerNav.querySelector('.lastLine');
+
+    hamburgerNav.addEventListener('click', function() {
+      document.querySelector('.nav').classList.toggle('nav-visible');
+      firstLine.classList.toggle('firstLine-clicked');
+      middleLine.classList.toggle('middleLine-clicked');
+      lastLine.classList.toggle('lastLine-clicked');
     });
   }
   
