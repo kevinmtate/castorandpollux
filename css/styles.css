@@ -3,8 +3,37 @@
   background-size: 100% 100%;
 }
 
+#introLogo {
+  animation: introLogoAnim 5s ease-in;
+}
+
+@keyframes introLogoAnim {
+  0% { opacity: 0; }
+  90% { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+#skipIntro {
+  background-color: rgba(0,0,0,.5);
+  bottom: 50px;
+  cursor: pointer;
+  right: 50px;
+}
+
 header {
+  opacity: 0;
+  top: -50px;
+  transition: transform .5s, opacity 1s;
   z-index: 100;
+}
+
+.header-visible {
+  opacity: 1;
+  transform: translateY(50px);
+}
+
+#mainLogo {
+  transition: opacity .5s ease-out;
 }
 
 #hamburgerNav {
@@ -47,18 +76,24 @@ header {
 }
 
 .nav {
-  background-color: gray;
-  height: 100%;
-  opacity: 0;
+  max-width: 500px;
   position: fixed;
-  transition: opacity .5s;
-  visibility: hidden;
-  width: 100%;
   z-index: 998;
 }
 
-.nav-visible {
+.nav-content a {
+  color: white;
+  left: -25%;
+  opacity: 0;
+  position: relative;
+  text-decoration: none;
+  transition: all .2s ease-out;
+  visibility: hidden;
+}
+
+.nav-content a.nav-item-visible {
   opacity: 1;
+  transform: translateX(25%);
   visibility: visible;
 }
 
@@ -67,16 +102,22 @@ main {
 }
 
 #stars {
-  /* background: linear-gradient(90deg, rgba(9,11,18,1) 0%, rgba(18,25,35,1) 50%, rgba(9,11,18,1) 100%); */
-  background: black;
+  background: linear-gradient(90deg, rgba(9,11,18,1) 0%, rgba(18,25,35,1) 50%, rgba(9,11,18,1) 100%);
+  /* background: black; */
   height: 5000px;
   position: fixed;
   z-index: -1;
 }
 
-#container {
+#mainContainer {
   height: 5000px;
   width: 100%;
+}
+
+
+/* helpers */
+.fadeout {
+  opacity: 0;
 }
 
 .mbAlot {
