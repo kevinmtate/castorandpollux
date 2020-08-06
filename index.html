@@ -19,9 +19,13 @@
     </div>
   </div>
   <div id="mainContainer">
-    <div id="stars" class="vh-100 w-100" style="top: 0"></div>
-    <header class="fixed w-100 flex items-center justify-center">
-      <img src="media/c&p-single_line.png" alt="Castor & Pollux" width="350"/>
+    <div id="starsContainer" style="top: 0">
+      <div id="starLayer1" class="star-layer"></div>
+      <div id="starLayer2" class="star-layer"></div>
+      <div id="starLayer3" class="star-layer"></div>
+    </div>
+    <header class="fixed w-100 flex items-center justify-end justify-center-ns">
+      <img src="media/c&p-single_line.png" alt="Castor & Pollux logo" id="headerLogo"/>
     </header>
     <button id="hamburgerNav">
       <div class="firstLine"></div>
@@ -29,7 +33,7 @@
       <div class="lastLine"></div>
     </button>
     <nav class="nav">
-      <div class="nav-content ml5 mt6 f1">
+      <div class="nav-content ml3 ml5-ns mt5 mt6-ns f2 f1-ns">
         <a href="#about" class="db mb2">About</a>
         <a href="#releases" class="db mb2">Releases</a>
         <a href="#shows" class="db mb2">Upcoming Shows</a>
@@ -40,19 +44,16 @@
     </nav>
     <main>
       <div class="vh-100 w-100 flex justify-center items-center white f1">
-        <img id="mainLogo" src="media/Copy of CastorPollux.png" alt="Castor & Pollux" />
+        <img id="mainLogo" src="./media/Copy of CastorPollux.png" alt="Castor & Pollux" />
       </div>
-      <div id="container">
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
-        <div class="f3 h5 h5 bg-white mbAlot mh7 pa3">content section</div>
+      <div id="about" class="white relative">
+        <img src="./media/cp_bio.jpg" alt="">
+        <div id="aboutGradient" class="absolute top-0 left-0"></div>
+        <div id="bioTextContainer" class="absolute top-0 left-0 flex justify-center w-100">
+          <p id="bioText" class="f2-ns lh-copy bg-black ph2">
+            Joe and Pete Romano, otherwise known as Castor & Pollux, are the New York, NY based twin brother production and DJ duo. The pair have been producing dance music for five years now. First inspired by acts like Hardwell, Swedish House Mafia, and W&W, now Castor & Pollux are embarking on a journey together, right by each other's side, in creating progressive and bigroom anthems. The twin brothers are looking to create their own destiny in touching people with their music and recognized as two guys that enjoy nothing more than putting a smile on people's faces. Castor & Pollux have performed alongside HARBER at Mercury Lounge during Thanksgiving weekend 2019 and expect to make noise with more performances in 2020. Their fans and followers can look forward to brand new originals and remixes on Spotify and SoundCloud.
+          </p>
+        </div>
       </div>
     </main>
   </div>

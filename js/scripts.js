@@ -12,26 +12,41 @@
   });
   
   function init() {
-    var starsEl = document.getElementById('stars');
+    var starsEl = document.getElementById('starsContainer');
     var headerEl = document.querySelector('header');
     var mainLogoEl = document.getElementById('mainLogo');
     starsEl.style.top = -window.pageYOffset + "px";
     var scrollSpeed = 1;
-    var numOfStars = starsEl.offsetHeight / 3;
+    var numOfStars = window.innerHeight / 7;
 
+    // layer1
     for (var i = 0; i <= numOfStars; i++) {
-      createStar();
+      createStar(document.getElementById('starLayer1'), 3);
     }
+    // layer2
+    for (var i = 0; i <= numOfStars; i++) {
+      createStar(document.getElementById('starLayer2'), 1);
+    }
+    // layer3
+    for (var i = 0; i <= numOfStars; i++) {
+      createStar(document.getElementById('starLayer3'), 1);
+    }
+
+    setInterval(function() {
+      // document.getElementById('starLayer1').style.top 
+    })
+    
   
     var prevYOffset = 0;
     document.addEventListener('scroll', function() {
       //stars
-      if (window.pageYOffset > prevYOffset) {
-        starsEl.style.top = parseInt(stars.style.top) - scrollSpeed + 'px';
-      } else {
-        starsEl.style.top = parseInt(stars.style.top) + scrollSpeed + 'px';
-      }
-      prevYOffset = window.pageYOffset;
+      // if (window.pageYOffset > prevYOffset) {
+      //   starsEl.style.top = parseInt(stars.style.top) - scrollSpeed + 'px';
+      // } else {
+      //   starsEl.style.top = parseInt(stars.style.top) + scrollSpeed + 'px';
+      // }
+      // prevYOffset = window.pageYOffset;
+
       // header
       if (window.pageYOffset > 0) {
         headerEl.classList.add('header-visible');
@@ -78,8 +93,6 @@
     var lastLine = hamburgerNav.querySelector('.lastLine');
     var navItems = document.querySelectorAll('nav a');
 
-    console.log(navItems);
-
     hamburgerNav.addEventListener('click', function() {
       firstLine.classList.toggle('firstLine-clicked');
       middleLine.classList.toggle('middleLine-clicked');
@@ -92,22 +105,22 @@
     });
   }
   
-  function createStar() {
-    var starsEl = document.getElementById('stars');
+  function createStar(layer, sizeMultiplier) {
+    var starsEl = document.getElementById('starsContainer');
     var star = document.createElement('div');
     var maxY = starsEl.offsetHeight;
     var maxX = starsEl.offsetWidth;
     var top = Math.floor(Math.random() * Math.floor(maxY));
     var left = Math.floor(Math.random() * Math.floor(maxX));
-    var size = Math.random() * Math.floor(3) + 1;
+    var size = Math.random() * Math.floor(sizeMultiplier) + 1;
   
-    star.classList.add('bg-white', 'absolute');
+    star.classList.add('star');
     star.style.width = size + 'px';
     star.style.height = size + 'px';
     star.style.top = top + 'px';
     star.style.left = left + 'px';
   
-    starsEl.appendChild(star);
+    layer.appendChild(star);
   }
 
 })();
