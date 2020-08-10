@@ -64,7 +64,7 @@
     var introEl = document.getElementById('intro');
     var mainEl = document.getElementById('mainContainer');
     var skipButton = document.getElementById('skipIntro');
-    var introTiming = 8000;
+    var introTiming = 10000;
 
     introEl.classList.remove('dn');
     mainEl.classList.add('dn');

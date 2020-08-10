@@ -8,13 +8,32 @@ html {
 }
 
 #introLogo {
-  animation: introLogoAnim 5s ease-in;
+  animation: introLogoAnimation 5s ease-in;
+  z-index: 1;
 }
 
-@keyframes introLogoAnim {
+@keyframes introLogoAnimation {
   0% { opacity: 0; }
   90% { opacity: .5; }
   100% { opacity: 1; }
+}
+
+#introTransition {
+  animation: introTransitionAnimation 9s ease-in;
+  background-color: white;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+@keyframes introTransitionAnimation {
+  0% { opacity: 0 }
+  75% { opacity: .1 }
+  100% { opacity: 1 }
 }
 
 #skipIntro {
