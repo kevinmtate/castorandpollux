@@ -12,7 +12,7 @@
   });
   
   function init() {
-    var starsEl = document.getElementById('starsContainer');
+    var starsEl = document.getElementById('starLayer1');
     var headerEl = document.querySelector('header');
     var mainLogoEl = document.getElementById('mainLogo');
     starsEl.style.top = -window.pageYOffset + "px";
@@ -32,18 +32,46 @@
       createStar(document.getElementById('starLayer3'), 1);
     }
 
-    setInterval(function() {
-      // document.getElementById('starLayer1').style.top 
-    })
+    // document.getElementById('starLayer1').querySelectorAll('.star').forEach(function(star) {
+    //   setInterval(function() {
+    //     if (star.offsetTop <= -3) {
+    //       star.style.top = window.innerHeight + 3 + "px";
+    //     } else {
+    //       star.style.top = star.offsetTop - 1 + "px";
+    //     }
+    //   }, 1);
+    // });
+
+    // document.getElementById('starLayer2').querySelectorAll('.star').forEach(function(star) {
+    //   setInterval(function() {
+    //     if (star.offsetTop <= -3) {
+    //       star.style.top = window.innerHeight + 3 + "px";
+    //     } else {
+    //       star.style.top = star.offsetTop - 1 + "px";
+    //     }
+    //   }, 500);
+    // });
+
+    // document.getElementById('starLayer3').querySelectorAll('.star').forEach(function(star) {
+    //   setInterval(function() {
+    //     if (star.offsetTop <= -3) {
+    //       star.style.top = window.innerHeight + 3 + "px";
+    //     } else {
+    //       star.style.top = star.offsetTop - 1 + "px";
+    //     }
+    //   }, 100);
+    // });
     
   
+    // animate on scroll
     var prevYOffset = 0;
     document.addEventListener('scroll', function() {
       //stars
       // if (window.pageYOffset > prevYOffset) {
-      //   starsEl.style.top = parseInt(stars.style.top) - scrollSpeed + 'px';
+      //   console.log(starsEl.style.top);
+      //   starsEl.style.top = parseInt(starsEl.style.top) - scrollSpeed + 'px';
       // } else {
-      //   starsEl.style.top = parseInt(stars.style.top) + scrollSpeed + 'px';
+      //   starsEl.style.top = parseInt(starsEl.style.top) + scrollSpeed + 'px';
       // }
       // prevYOffset = window.pageYOffset;
 
@@ -57,6 +85,7 @@
       }
     });
 
+    AOS.init();
     initHamburger();
   }
 

@@ -8,6 +8,7 @@
   <meta name="author" content="">
   <link rel='icon' href='./media/Copy of CastorPollux.png'>
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/tachyons-min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -20,8 +21,8 @@
     </div>
   </div>
   <div id="mainContainer">
-    <div id="starsContainer" style="top: 0">
-      <div id="starLayer1" class="star-layer"></div>
+    <div id="starsContainer">
+      <div id="starLayer1" class="star-layer" style="top: 0;"></div>
       <div id="starLayer2" class="star-layer"></div>
       <div id="starLayer3" class="star-layer"></div>
     </div>
@@ -47,7 +48,7 @@
       <div class="vh-100 w-100 flex justify-center items-center white f1">
         <img id="mainLogo" src="./media/Copy of CastorPollux.png" alt="Castor & Pollux" />
       </div>
-      <div id="about" class="white relative">
+      <div id="about" class="white relative" data-aos="fade-out" data-aos-anchor-placement="bottom-center" data-aos-duration="1000">
         <img src="./media/cp_bio.jpg" alt="">
         <div id="aboutGradient" class="absolute top-0 left-0"></div>
         <div id="bioTextContainer" class="absolute top-0 left-0 flex justify-center w-100">
@@ -58,6 +59,7 @@
       </div>
     </main>
   </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>

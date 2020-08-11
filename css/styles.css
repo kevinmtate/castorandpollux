@@ -129,6 +129,7 @@ header {
 
 main {
   position: relative;
+  height: 4000px;
 }
 
 #starsContainer {
@@ -148,6 +149,23 @@ main {
 .star {
   background-color: white;
   position: absolute;
+}
+
+#starLayer1 {
+  /* animation: starAnimation 60s linear infinite; */
+}
+
+/* #starLayer2 {
+  animation: starAnimation 200s linear infinite;
+} */
+
+/* #starLayer3 {
+  animation: starAnimation 100s linear infinite;
+} */
+
+@keyframes starAnimation {
+  from { transform: translateY(0) }
+  to { transform: translateY(-2000px) }
 }
 
 #mainContainer {
@@ -174,7 +192,7 @@ main {
   max-width: 1500px;
 }
 
-/* helpers */
+/* HELPERS */
 .fadeout {
   opacity: 0;
 }
@@ -183,6 +201,18 @@ main {
   margin-bottom: 32rem;
 }
 
+/* CUSTOM AOS */
+[data-aos="fade-out"] {
+  opacity: 1 !important;
+  transition-property: opacity;
+}
+
+[data-aos="fade-out"].aos-animate {
+  opacity: 0 !important;
+}
+
+
+/* MEDIA QUERIES */
 @media only screen and (max-width: 30rem) {
   #hamburgerNav {
     left: 5px;
