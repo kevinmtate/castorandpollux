@@ -12,75 +12,17 @@
   });
   
   function init() {
-    var starsEl = document.getElementById('starLayer1');
-    var headerEl = document.querySelector('header');
-    var mainLogoEl = document.getElementById('mainLogo');
-    starsEl.style.top = -window.pageYOffset + "px";
-    var scrollSpeed = 1;
-    var numOfStars = window.innerHeight / 7;
-
-    // layer1
-    for (var i = 0; i <= numOfStars; i++) {
-      createStar(document.getElementById('starLayer1'), 3);
-    }
-    // layer2
-    for (var i = 0; i <= numOfStars; i++) {
-      createStar(document.getElementById('starLayer2'), 1);
-    }
-    // layer3
-    for (var i = 0; i <= numOfStars; i++) {
-      createStar(document.getElementById('starLayer3'), 1);
-    }
-
-    // document.getElementById('starLayer1').querySelectorAll('.star').forEach(function(star) {
-    //   setInterval(function() {
-    //     if (star.offsetTop <= -3) {
-    //       star.style.top = window.innerHeight + 3 + "px";
-    //     } else {
-    //       star.style.top = star.offsetTop - 1 + "px";
-    //     }
-    //   }, 1);
-    // });
-
-    // document.getElementById('starLayer2').querySelectorAll('.star').forEach(function(star) {
-    //   setInterval(function() {
-    //     if (star.offsetTop <= -3) {
-    //       star.style.top = window.innerHeight + 3 + "px";
-    //     } else {
-    //       star.style.top = star.offsetTop - 1 + "px";
-    //     }
-    //   }, 500);
-    // });
-
-    // document.getElementById('starLayer3').querySelectorAll('.star').forEach(function(star) {
-    //   setInterval(function() {
-    //     if (star.offsetTop <= -3) {
-    //       star.style.top = window.innerHeight + 3 + "px";
-    //     } else {
-    //       star.style.top = star.offsetTop - 1 + "px";
-    //     }
-    //   }, 100);
-    // });
-    
+    var topLogoEl = document.querySelector('.topLogo');
+    var mainLogoEl = document.querySelector('.mainLogo');
   
     // animate on scroll
-    var prevYOffset = 0;
     document.addEventListener('scroll', function() {
-      //stars
-      // if (window.pageYOffset > prevYOffset) {
-      //   console.log(starsEl.style.top);
-      //   starsEl.style.top = parseInt(starsEl.style.top) - scrollSpeed + 'px';
-      // } else {
-      //   starsEl.style.top = parseInt(starsEl.style.top) + scrollSpeed + 'px';
-      // }
-      // prevYOffset = window.pageYOffset;
-
       // header
-      if (window.pageYOffset > 0) {
-        headerEl.classList.add('header-visible');
+      if (window.pageYOffset > window.innerHeight / 2) {
+        topLogoEl.classList.add('topLogo-visible');
         mainLogoEl.classList.add('fadeout');
       } else {
-        headerEl.classList.remove('header-visible');
+        topLogoEl.classList.remove('topLogo-visible');
         mainLogoEl.classList.remove('fadeout');
       }
     });
@@ -132,24 +74,6 @@
         }, i * 50)
       });
     });
-  }
-  
-  function createStar(layer, sizeMultiplier) {
-    var starsEl = document.getElementById('starsContainer');
-    var star = document.createElement('div');
-    var maxY = starsEl.offsetHeight;
-    var maxX = starsEl.offsetWidth;
-    var top = Math.floor(Math.random() * Math.floor(maxY));
-    var left = Math.floor(Math.random() * Math.floor(maxX));
-    var size = Math.random() * Math.floor(sizeMultiplier) + 1;
-  
-    star.classList.add('star');
-    star.style.width = size + 'px';
-    star.style.height = size + 'px';
-    star.style.top = top + 'px';
-    star.style.left = left + 'px';
-  
-    layer.appendChild(star);
   }
 
 })();

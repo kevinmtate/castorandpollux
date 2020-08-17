@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/tachyons-min.css">
+  <!-- PARALLAX STAR BACKGROUND MADE BY @SCREENSHAKE linkedin.com/in/saranshsinha -->
+  <link rel="stylesheet" href="css/plax-star-bgrnd.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,18 +19,21 @@
     <div id="introContainer" class="vh-100 w-100 flex justify-center items-center">
       <img id="introLogo" src="media/Copy of CastorPollux.png" alt="Castor & Pollux"/>
       <div id="introTransition"></div>
-      <button id="skipIntro" class="white fixed f3 pa3 br3 ba b--white">Skip Intro --></button>
+      <button id="skipIntro" class="white fixed f3 pa3 br3 ba b--white">Skip Intro</button>
     </div>
   </div>
-  <div id="mainContainer">
+  <header>
     <div id="starsContainer">
-      <div id="starLayer1" class="star-layer" style="top: 0;"></div>
-      <div id="starLayer2" class="star-layer"></div>
-      <div id="starLayer3" class="star-layer"></div>
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
     </div>
-    <header class="fixed w-100 flex items-center justify-end justify-center-ns">
-      <img src="media/c&p-single_line.png" alt="Castor & Pollux logo" id="headerLogo"/>
-    </header>
+    <img class="mainLogo" src="./media/Copy of CastorPollux.png" alt="Castor & Pollux" />
+  </header>
+  <div id="mainContainer">
+    <div class="topLogo">
+      <img src="media/c&p-single_line.png" alt="Castor & Pollux"/>
+    </div>
     <button id="hamburgerNav">
       <div class="firstLine"></div>
       <div class="middleLine"></div>
@@ -36,20 +41,17 @@
     </button>
     <nav class="nav">
       <div class="nav-content ml3 ml5-ns mt5 mt6-ns f2 f1-ns">
-        <a href="#about" class="db mb2">About</a>
-        <a href="#releases" class="db mb2">Releases</a>
-        <a href="#shows" class="db mb2">Upcoming Shows</a>
-        <a href="#press" class="db mb2">Press</a>
-        <a href="#merch" class="db mb2">Merch - coming soon</a>
-        <a href="#contact" class="db mb2">Contact Us</a>
+        <a href="#about" class="dib mb2 nav-item">About</a>
+        <a href="#releases" class="dib mb2 nav-item">Releases</a>
+        <a href="#shows" class="dib mb2 nav-item">Upcoming Shows</a>
+        <a href="#press" class="dib mb2 nav-item">Press</a>
+        <a href="#merch" class="dib mb2 nav-item">Merch - coming soon</a>
+        <a href="#contact" class="dib mb2 nav-item">Contact Us</a>
       </div>
     </nav>
     <main>
-      <div class="vh-100 w-100 flex justify-center items-center white f1">
-        <img id="mainLogo" src="./media/Copy of CastorPollux.png" alt="Castor & Pollux" />
-      </div>
-      <div id="about" class="white relative" data-aos="fade-out" data-aos-anchor-placement="bottom-center" data-aos-duration="1000">
-        <img src="./media/cp_bio.jpg" alt="">
+      <div id="about" class="white relative" data-aos="fade" data-aos-anchor-placement="top-center" data-aos-duration="500">
+        <img src="./media/Soft Edge.png" alt="">
         <div id="aboutGradient" class="absolute top-0 left-0"></div>
         <div id="bioTextContainer" class="absolute top-0 left-0 flex justify-center w-100">
           <p id="bioText" class="f2-ns lh-copy bg-black ph2">
