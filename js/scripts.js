@@ -1,6 +1,6 @@
 (function() {
 
-  var intro = true;
+  var intro = false;
 
   document.addEventListener('DOMContentLoaded', function() {
     if (intro) {
@@ -20,10 +20,10 @@
       // header
       if (window.pageYOffset > window.innerHeight / 2) {
         topLogoEl.classList.add('topLogo-visible');
-        mainLogoEl.classList.add('fadeout');
+        mainLogoEl.classList.add('hide');
       } else {
         topLogoEl.classList.remove('topLogo-visible');
-        mainLogoEl.classList.remove('fadeout');
+        mainLogoEl.classList.remove('hide');
       }
     });
 
@@ -58,21 +58,37 @@
   }
 
   function initHamburger() {
-    var hamburgerNav = document.getElementById('hamburgerNav')
+    var hamburgerNav = document.querySelector('.hamburgerNav')
     var firstLine = hamburgerNav.querySelector('.firstLine');
     var middleLine = hamburgerNav.querySelector('.middleLine');
     var lastLine = hamburgerNav.querySelector('.lastLine');
     var navItems = document.querySelectorAll('nav a');
+    var nav = document.querySelector('.nav');
 
+    // toggle open/close nav on hamburger nav click
     hamburgerNav.addEventListener('click', function() {
-      firstLine.classList.toggle('firstLine-clicked');
-      middleLine.classList.toggle('middleLine-clicked');
-      lastLine.classList.toggle('lastLine-clicked');
-      [...navItems].forEach(function(el, i) {
-        setTimeout(function() {
-          el.classList.toggle('nav-item-visible');
-        }, i * 50)
+      toggleNav(firstLine, middleLine, lastLine, navItems, nav);
+    });
+
+    // togle open/close nav on nav item click
+    [...navItems].forEach(function(el) {
+      el.addEventListener('click', function() { 
+        toggleNav(firstLine, middleLine, lastLine, navItems, nav) 
       });
+    });
+  }
+
+  function toggleNav(firstLine, middleLine, lastLine, navItems, nav) {
+    firstLine.classList.toggle('firstLine-clicked');
+    middleLine.classList.toggle('middleLine-clicked');
+    lastLine.classList.toggle('lastLine-clicked');
+    nav.classList.toggle('show');
+
+    // animate nav items
+    [...navItems].forEach(function(el, i) {
+      setTimeout(function() {
+        el.classList.toggle('nav-item-visible');
+      }, i * 50)
     });
   }
 

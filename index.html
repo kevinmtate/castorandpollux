@@ -4,16 +4,18 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>Castor and Pollux</title>
+  <noscript>Javascript will need to be enabled to get the full experience of this site</noscript>
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel='icon' href='./media/Copy of CastorPollux.png'>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/tachyons-min.css">
-  <!-- PARALLAX STAR BACKGROUND MADE BY @SCREENSHAKE linkedin.com/in/saranshsinha -->
   <link rel="stylesheet" href="css/plax-star-bgrnd.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<!-- PARALLAX STAR BACKGROUND MADE BY @SCREENSHAKE linkedin.com/in/saranshsinha -->
 <body>
   <div id="intro" class="dn">
     <div id="introContainer" class="vh-100 w-100 flex justify-center items-center">
@@ -22,45 +24,62 @@
       <button id="skipIntro" class="white fixed f3 pa3 br3 ba b--white">Skip Intro</button>
     </div>
   </div>
-  <header>
-    <div id="starsContainer">
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-    </div>
-    <img class="mainLogo" src="./media/Copy of CastorPollux.png" alt="Castor & Pollux" />
-  </header>
   <div id="mainContainer">
-    <div class="topLogo">
+    <header>
+      <div id="starsContainer">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </div>
+      <img class="mainLogo" src="./media/Copy of CastorPollux.png" alt="Castor & Pollux" />
+    </header>
+    <div class="topLogo ph2">
       <img src="media/c&p-single_line.png" alt="Castor & Pollux"/>
     </div>
-    <button id="hamburgerNav">
-      <div class="firstLine"></div>
-      <div class="middleLine"></div>
-      <div class="lastLine"></div>
+    <button class="hamburgerNav">
+      <div class="hambLine firstLine"></div>
+      <div class="hambLine middleLine"></div>
+      <div class="hambLine lastLine"></div>
     </button>
     <nav class="nav">
-      <div class="nav-content ml3 ml5-ns mt5 mt6-ns f2 f1-ns">
+      <img id="nav-background-image" src="./media/NavMenuPicbackground.png" alt="">
+      <div class="nav-content pl3 pl5-ns pt5 pt6-ns f2 f1-ns">
         <a href="#about" class="dib mb2 nav-item">About</a>
         <a href="#releases" class="dib mb2 nav-item">Releases</a>
         <a href="#shows" class="dib mb2 nav-item">Upcoming Shows</a>
-        <a href="#press" class="dib mb2 nav-item">Press</a>
         <a href="#merch" class="dib mb2 nav-item">Merch - coming soon</a>
+        <a href="#press" class="dib mb2 nav-item">Press / Media</a>
         <a href="#contact" class="dib mb2 nav-item">Contact Us</a>
       </div>
+      <!-- <div class="nav-hover-overlay"></div> -->
     </nav>
     <main>
-      <div id="about" class="white relative" data-aos="fade" data-aos-anchor-placement="top-center" data-aos-duration="500">
-        <img src="./media/Soft Edge.png" alt="">
-        <div id="aboutGradient" class="absolute top-0 left-0"></div>
-        <div id="bioTextContainer" class="absolute top-0 left-0 flex justify-center w-100">
-          <p id="bioText" class="f2-ns lh-copy bg-black ph2">
+      <section id="about" class="white relative" data-aos="fade" data-aos-anchor-placement="top-center" data-aos-duration="500">
+        <img id="bioImage" src="./media/Soft Edge.png" alt="" width="1688" class="db center">
+        <!-- <div id="aboutGradient" class="absolute top-0 left-0"></div> -->
+        <div id="bioTextContainer" class="relative flex justify-center w-100 bb bt b--gray pv3 pv5-ns ph2">
+          <p id="bioText" class="f4-m f3-ns lh-copy ph2 center">
             Joe and Pete Romano, otherwise known as Castor & Pollux, are the New York, NY based twin brother production and DJ duo. The pair have been producing dance music for five years now. First inspired by acts like Hardwell, Swedish House Mafia, and W&W, now Castor & Pollux are embarking on a journey together, right by each other's side, in creating progressive and bigroom anthems. The twin brothers are looking to create their own destiny in touching people with their music and recognized as two guys that enjoy nothing more than putting a smile on people's faces. Castor & Pollux have performed alongside HARBER at Mercury Lounge during Thanksgiving weekend 2019 and expect to make noise with more performances in 2020. Their fans and followers can look forward to brand new originals and remixes on Spotify and SoundCloud.
           </p>
         </div>
-      </div>
+      </section>
+      <section id="releases" class="white pt7">
+        <ul class="mw5 center">
+          <li class="pv5" data-aos="fade-right">
+            <iframe src="https://open.spotify.com/embed/track/5GNK9oDV7fZeHbWokvAfOH" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </li>
+          <li class="pv5" data-aos="fade-left">
+            <iframe src="https://open.spotify.com/embed/track/7B0ND16APx16UwGqBUaHET" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </li>
+        </ul>
+      </section>
     </main>
+    <a href="#" class="backToTop"><i class="fa fa-angle-double-up white fa-4x"></i></a>
+    <footer>
+  
+    </footer>
   </div>
+  <script src="https://use.fontawesome.com/f61d977148.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/scripts.js"></script>
 </body>
