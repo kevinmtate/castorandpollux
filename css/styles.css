@@ -63,7 +63,8 @@ header {
 
 #starsContainer {
   /* background: linear-gradient(90deg, rgba(9,11,18,1) 0%, rgba(18,25,35,1) 50%, rgba(9,11,18,1) 100%); */
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+  background: black;
   height: 100%;
   position: absolute;
   width: 100%;
