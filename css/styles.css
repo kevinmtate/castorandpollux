@@ -133,10 +133,10 @@ header {
 
 #nav-background-image {
   height: 100%;
-  left: 0;
+  left: -175px;
   position: absolute;
   top: 0;
-  width: 100%;
+  max-width: 1000px;
 }
 
 .nav-content {
@@ -191,6 +191,8 @@ main {
 }
 
 .topLogo {
+  background-color: black;
+  border-bottom: 1px solid gray;
   opacity: 0;
   position: fixed;
   text-align: center;
@@ -202,7 +204,7 @@ main {
 
 .topLogo-visible {
   opacity: 1;
-  transform: translateY(62px);
+  transform: translateY(50px);
 }
 
 .topLogo img {
@@ -237,8 +239,8 @@ main {
   position: relative;
 }
 
-.releases-list iframe {
-  /* max-width: 100%; */
+.release-card {
+  width: 350px;
 }
 
 /* HELPERS */
@@ -326,6 +328,8 @@ footer a {
   }
 
   .topLogo {
+    padding-bottom: 12px;
+    padding-top: 12px;
     text-align: right;
   }
 
@@ -334,7 +338,13 @@ footer a {
   }
 
   .topLogo-visible {
-    transform: translateY(62px);
+    transform: translateY(50px);
+  }
+}
+
+@media only screen and (min-width: 30rem) {
+  #nav-background-image {
+    left: -100px;
   }
 }
 
@@ -344,9 +354,14 @@ footer a {
   }
 
   .releases-list li:nth-child(even) {
-    left: 100%;
+    left: 15%;
   }
   .releases-list li:nth-child(odd) {
-    right: 100%;
+    right: 15%;
+  }
+
+  #nav-background-image {
+    max-width: unset;
+    width: 100%;
   }
 }

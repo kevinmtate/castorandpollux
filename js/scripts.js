@@ -1,6 +1,6 @@
 (function() {
 
-  var intro = true;
+  var intro = false;
 
   document.addEventListener('DOMContentLoaded', function() {
     if (intro) {
@@ -58,7 +58,7 @@
   }
 
   function initHamburger() {
-    var hamburgerNav = document.querySelector('.hamburgerNav')
+    var hamburgerNav = document.querySelector('.hamburgerNav');
     var firstLine = hamburgerNav.querySelector('.firstLine');
     var middleLine = hamburgerNav.querySelector('.middleLine');
     var lastLine = hamburgerNav.querySelector('.lastLine');
@@ -73,7 +73,7 @@
     // togle open/close nav on nav item click
     [...navItems].forEach(function(el) {
       el.addEventListener('click', function() { 
-        toggleNav(firstLine, middleLine, lastLine, navItems, nav) 
+        toggleNav(firstLine, middleLine, lastLine, navItems, nav);
       });
     });
   }
@@ -88,7 +88,7 @@
     [...navItems].forEach(function(el, i) {
       setTimeout(function() {
         el.classList.toggle('nav-item-visible');
-      }, i * 50)
+      }, i * 50);
     });
   }
 
