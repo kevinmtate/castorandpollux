@@ -45,10 +45,11 @@ button {
 }
 
 #skipIntro {
-  background-color: rgba(0,0,0,.5);
-  bottom: 50px;
+  /* background-color: rgba(0,0,0,.5); */
+  bottom: 25px;
   cursor: pointer;
-  right: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* HEADER */
@@ -77,6 +78,7 @@ header {
   top: 50%;
   transform: translate(-50%, -50%);
   transition: opacity .5s ease-out, visibility .5s;
+  width: 250px;
 }
 
 .hamburgerNav {
@@ -223,16 +225,14 @@ main {
   width: 100%;
 }
 
-#bioImage {
-  transform: translateY(30%);
-}
-
 #bioTextContainer {
   background-color: rgba(0,0,0,.75); 
+  transform: translateY(-10%);
 }
 
 #bioText {
   max-width: 1500px;
+  text-align: center;
 }
 
 /* #RELEASES */
@@ -241,7 +241,7 @@ main {
 }
 
 .release-card {
-  width: 350px;
+  width: 250px;
 }
 
 /* HELPERS */
@@ -313,6 +313,10 @@ footer a {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 30rem) {
+  .f25-s {
+    font-size: 1.9rem;
+  }
+
   #bioTextContainer {
     top: 100%;
   }
@@ -347,11 +351,19 @@ footer a {
   #nav-background-image {
     left: -100px;
   }
+
+  #bioTextContainer {
+    transform: translateY(-20%);
+  }
+
+  .mainLogo {
+    width: 330px;
+  }
 }
 
 @media only screen and (min-width: 60rem) {
   .about-offset {
-    transform: translateY(-20%);
+    transform: translateY(-35%);
   }
 
   .releases-list li:nth-child(even) {
@@ -364,5 +376,13 @@ footer a {
   #nav-background-image {
     max-width: unset;
     width: 100%;
+  }
+
+  #bioTextContainer {
+    transform: translateY(-60%);
+  }
+
+  .release-card {
+    width: 350px;
   }
 }
