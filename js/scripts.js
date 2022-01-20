@@ -1,6 +1,6 @@
 (function() {
 
-  var intro = true;
+  var intro = false;
 
   document.addEventListener('DOMContentLoaded', function() {
     if (intro) {
@@ -25,6 +25,13 @@
         topLogoEl.classList.remove('topLogo-visible');
         mainLogoEl.classList.remove('hide');
       }
+    });
+
+    // add show/hide event listener to archived shows
+    var shows2021H2El = document.getElementById('shows-2021');
+    var shows2021El = shows2021H2El.parentElement.querySelector('.shows-content');
+    shows2021H2El.addEventListener('click', function() {
+      shows2021El.classList.toggle('dn');
     });
 
     AOS.init({disable:'mobile'});
