@@ -1,6 +1,6 @@
 (function() {
 
-  var intro = false;
+  var intro = true;
 
   document.addEventListener('DOMContentLoaded', function() {
     if (intro) {
