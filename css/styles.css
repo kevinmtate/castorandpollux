@@ -228,7 +228,7 @@ main {
 
 #bioTextContainer {
   background-color: rgba(0,0,0,.75); 
-  transform: translateY(-10%);
+  transform: translateY(-7vw);
 }
 
 #bioText {
@@ -329,10 +329,6 @@ footer a {
     font-size: 1.9rem;
   }
 
-  #bioTextContainer {
-    top: 100%;
-  }
-
   .hamburgerNav {
     left: 5px;
     top: 5px;
@@ -360,10 +356,6 @@ footer a {
     left: -100px;
   }
 
-  #bioTextContainer {
-    transform: translateY(-20%);
-  }
-
   #introLogo {
     width: 330px;
   }
@@ -388,10 +380,6 @@ footer a {
   #nav-background-image {
     max-width: unset;
     width: 100%;
-  }
-
-  #bioTextContainer {
-    transform: translateY(-60%);
   }
 
   .release-card {
