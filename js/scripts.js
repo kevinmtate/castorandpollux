@@ -27,11 +27,13 @@
       }
     });
 
-    // add show/hide event listener to archived shows
-    var shows2021H2El = document.getElementById('shows-2021');
-    var shows2021El = shows2021H2El.parentElement.querySelector('.shows-content');
-    shows2021H2El.addEventListener('click', function() {
-      shows2021El.classList.toggle('dn');
+    // add show/hide event listener to archived show sections
+    var showsToggleEls = document.getElementsByClassName('shows-toggle');
+    [...showsToggleEls].forEach(function(el) {
+      var showsParentEl = el.parentElement.querySelector('.shows-content');
+      el.addEventListener('click', function() {
+        showsParentEl.classList.toggle('dn');
+      });
     });
 
     AOS.init({disable:'mobile'});
