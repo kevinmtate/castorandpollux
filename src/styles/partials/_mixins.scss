@@ -1,0 +1,38 @@
+@import './variables';
+@import './fonts';
+
+// Media Queries
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media (min-width: $desktop-large-breakpoint) {
+        @content;
+    }
+}
+
+
+// Fonts
+// @mixin font-reg {
+//     font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+//     font-weight: normal;
+// }
+
+// @mixin font-bold {
+//     font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+//     font-weight: bold;
+// }
+
+// @mixin font-light {
+//     font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+//     font-weight: lighter;
+// }
