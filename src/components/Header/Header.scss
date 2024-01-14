@@ -1,0 +1,52 @@
+.header {
+	background-color: #FFF;
+	padding: 0 40px;
+
+	&-nav {
+		padding: 24px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&__logo {
+
+			&--img {
+				width: 260px;
+				filter: invert(100%);
+			}
+		}
+
+		&__main-nav {
+			display: flex;
+			// justify-content: space-between;
+			// width: 30%;
+			gap: 16px;
+
+			&--link {
+				font-size: 18px;
+
+				&:hover {
+					font-weight: bold;
+				}
+			}
+
+		}
+
+		&__social-nav {
+			display: flex;
+			align-items: center;
+			justify-content: right;
+			width: 370px;
+			gap: 16px;
+
+
+			&--link-img {
+				height: 18px;
+			}
+
+
+		}
+
+
+	}
+}

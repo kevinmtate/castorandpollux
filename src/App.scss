@@ -1,6 +1,11 @@
-// .App {
-//   text-align: center;
-// }
+@import './styles/partials/variables';
+
+
+.App {
+   //   text-align: center;
+   height: 100%;
+   background-color: $silver;
+}
 
 // .App-logo {
 //   height: 40vmin;

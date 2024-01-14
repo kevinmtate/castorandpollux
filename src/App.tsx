@@ -12,25 +12,25 @@ import Contact from './pages/Contact/Contact';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
+	return (
+		<div className="App">
 
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/shows' element={<Shows />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/releases' element={<Releases />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='*' element={<PageNotFound />} />
-        </Routes>
-      </BrowserRouter>
+			<BrowserRouter>
+				<Header />
+				<Routes>
+					<Route path='/' element={<HomePage />} />
+					<Route path='/shows' element={<Shows />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/releases' element={<Releases />} />
+					<Route path='/contact' element={<Contact />} />
+					<Route path='*' element={<PageNotFound />} />
+				</Routes>
+				<Footer />
+			</BrowserRouter>
 
-      <Footer />
 
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;
