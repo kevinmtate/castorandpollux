@@ -3,21 +3,27 @@
 
 // Media Queries
 @mixin tablet {
-    @media (min-width: $tablet-breakpoint) {
-        @content;
-    }
+	@media (min-width: $tablet-breakpoint) {
+		@content;
+	}
+}
+
+@mixin desktop-header {
+	@media (min-width: $header-desktop-breakpoint) {
+		@content;
+	}
 }
 
 @mixin desktop {
-    @media (min-width: $desktop-breakpoint) {
-        @content;
-    }
+	@media (min-width: $desktop-breakpoint) {
+		@content;
+	}
 }
 
 @mixin desktop-large {
-    @media (min-width: $desktop-large-breakpoint) {
-        @content;
-    }
+	@media (min-width: $desktop-large-breakpoint) {
+		@content;
+	}
 }
 
 
