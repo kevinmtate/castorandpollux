@@ -1,11 +1,13 @@
 import './Hero.scss';
+import heroImg from '../../assets/images/hero-images/New_transparent_Take_2.png'
 
 const Hero = () => {
-    return (
-        <div>
+	return (
+		<section className='hero'>
+			<img src={heroImg} alt="" className="hero__img" />
 
-        </div>
-    )
+		</section>
+	)
 }
 
 export default Hero

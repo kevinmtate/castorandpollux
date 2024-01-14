@@ -5,18 +5,18 @@ import TourDates from '../../components/TourDates/TourDates';
 import './HomePage.scss';
 
 const HomePage = () => {
-   return (
-      <div>
-         <Hero />
+	return (
+		<main>
+			<Hero />
 
-         <RecentReleases />
+			<RecentReleases />
 
-         <TourDates />
+			<TourDates />
 
-         <SignUpForm />
+			<SignUpForm />
 
-      </div>
-   )
+		</main>
+	)
 }
 
 export default HomePage
