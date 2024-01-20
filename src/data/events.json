@@ -1,8 +1,152 @@
 [
-   {
-      "date": "Jan. 19th, 2024",
-      "artist": "Castor & Pollux",
-      "venue": "komodo Louonge",
-      "city": "Dallas, TX"
-   }
+	{
+		"date": "NOV 25, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "NEBULA",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "NOV 24, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "AVANT GARDNER",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "OCT 21, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "TURN IT UP MUZIK MIX MARATHON ADE 2023",
+		"location": "AMSTERDAM, NL"
+	},
+	{
+		"date": "OCT 13, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "PREMIER NIGHTCLUB",
+		"location": "ATLANTIC CITY, NJ"
+	},
+	{
+		"date": "SEP 30, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "MARQUEE NY",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "SEP 14, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "SKY SLC",
+		"location": "SALT LAKE CITY, UT"
+	},
+	{
+		"date": "SEP 9, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "MISSION NIGHTCLUB",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "AUG 25, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "MARQUEE NEW YORK",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "AUG 18, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "THE VANGUARD",
+		"location": "ORLAND, FL"
+	},
+	{
+		"date": "AUG 11-13, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "ELEMENTS FESTIVAL",
+		"location": "LONG POND, PA"
+	},
+	{
+		"date": "AUG 5, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "MARQUEE NEW YORK",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "JUL 29, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "MARQUEE NEW YORK",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "JUL 21, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "SOMEWHERE NOWHERE",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "JUL 9, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "SUMMER CLUB",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "JUN 24, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "MISSION NIGHTCLUB",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "JUN 10, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "GREEN ROOM",
+		"location": "FT. LAUDERDALE, FL"
+	},
+	{
+		"date": "MAY 13, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "EVOL NIGHTCLUB",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "APR 28, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "MARQUEE",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "APR 15, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "ROYALE BOSTON",
+		"location": "BOSTON, MA"
+	},
+	{
+		"date": "APR 1, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "MISSION NYC",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "FEB 25, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "LAVO W/ STOON & FRIENDS",
+		"location": "NEW YORK, NY"
+	},
+	{
+		"date": "FEB 17, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "ECHOSTAGE W/ ALESSO",
+		"location": "WASHINGTON, DC"
+	},
+	{
+		"date": "FEB 11, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "AVALON HOLLYWOOD W/ MATISSE & SADKO",
+		"location": "LOS ANGELES, CA"
+	},
+	{
+		"date": "FEB 4, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "ELECTRIC HOTEL",
+		"location": "CHICAGO, IL"
+	},
+	{
+		"date": "JAN 26, 2023",
+		"artist": "CASTOR & POLLUX",
+		"venue": "SKY SLC",
+		"location": "SALT LAKE CITY, UT"
+	}
 ]
