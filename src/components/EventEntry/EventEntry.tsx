@@ -1,10 +1,19 @@
 import './EventEntry.scss';
 
-const EventEntry = ({ eventData }: { eventData: any }) => {
-	console.log(eventData[0].date)
+type EventData = {
+	date: any,
+	artist: string,
+	venue: string,
+	location: string,
+	url: string
+}
+
+const EventEntry = ({ eventData }: { eventData: EventData[] }) => {
+
+
 	return (
 		<>
-			{eventData.map((event: any, index: any) => (
+			{eventData.map((event: EventData, index: number) => (
 				< article className="event" key={index} >
 					<div className="event__top-container">
 						<a href="" className="event__top-container--date">{event.date}</a>
@@ -22,7 +31,7 @@ const EventEntry = ({ eventData }: { eventData: any }) => {
 					</div>
 					<div className="event__bottom-container">
 						<a href="" className="event__bottom-container--button">Remind Me</a>
-						<a href="" className="event__bottom-container--button">Tickets</a>
+						<a href={event.url} className="event__bottom-container--button">Tickets</a>
 					</div>
 				</article >
 			))}

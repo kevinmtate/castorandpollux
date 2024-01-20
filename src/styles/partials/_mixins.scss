@@ -27,7 +27,7 @@
 }
 
 
-// Fonts
+// FONTS
 // @mixin font-reg {
 //     font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
 //     font-weight: normal;
@@ -42,3 +42,31 @@
 //     font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
 //     font-weight: lighter;
 // }
+
+
+// BUTTONS
+@mixin button {
+	border: 1px solid $white;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 224px;
+	height: 40px;
+	transition: color 0.2s ease-in-out;
+
+	&:hover {
+		color: lightslategray;
+	}
+
+	@include tablet {
+		// width: 100%;
+	}
+
+	@include desktop {
+		// width: 100%;
+	}
+}
