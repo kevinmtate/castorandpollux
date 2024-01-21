@@ -1,0 +1,63 @@
+@import '../../styles/partials/mixins';
+
+.tourdates {
+   background-color: black;
+   background-image: url('../../assets/images/miscellaneous/NavMenuPicbackground.png');
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+   padding: 44px 28px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   // justify-content: center;
+   align-items: center;
+
+   &__header {}
+
+   &__follow-container {
+      padding: 20px 0;
+      // max-width: 1500px;
+
+      &--subheader {
+         font-weight: bolder;
+         font-size: 24px;
+      }
+
+      &--follow-button {
+         font-weight: bolder;
+         font-size: 18px;
+         padding: 30px;
+      }
+   }
+
+   &__events-container {
+      width: 100%;
+      max-width: 1500px;
+
+      &--upcoming {
+         margin: 0 8px;
+      }
+   }
+
+   &__nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      margin: 0 8px;
+      gap: 12px;
+      border-bottom: 1px solid #fff;
+      font-size: 14px;
+      font-weight: bold;
+
+      @include tablet {
+         justify-content: left;
+      }
+   }
+
+}
+
+.divider {
+   font-size: 18px;
+}
