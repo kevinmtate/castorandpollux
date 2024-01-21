@@ -1,64 +1,120 @@
 @import '../../styles/partials/mixins';
 
 .event {
-	padding: 20px 8px;
-	border: solid #fff;
-	border-width: 0 0 1px 0;
-	transition: background-color 0.2s ease-in-out;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
+   padding: 20px 8px;
+   border: solid #fff;
+   border-width: 0 0 1px 0;
+   transition: background-color 0.2s ease-in-out;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
 
-	&:hover {
-		background-color: rgba(242, 242, 242, 0.1);
-	}
+   @include tablet {
+      flex-direction: row;
+      justify-content: right;
+      align-items: center;
+      text-align: left;
+      gap: 8px;
 
-	&__top-container {
-		display: flex;
-		flex-direction: column;
+   }
 
-		&--date {
-			margin-bottom: 4px;
-			font-weight: bold;
-		}
+   @include desktop {
+      justify-content: space-between;
+   }
 
-		&--location {
-			margin-bottom: 4px;
-		}
-	}
+   &:hover {
+      background-color: rgba(242, 242, 242, 0.1);
+   }
 
-	&__center-container {
+   &__top-container {
+      display: flex;
+      flex-direction: column;
 
-		&--venue {
-			margin-bottom: 4px;
-		}
-	}
+      @include tablet {
+         flex: auto;
+      }
 
-	&__social-wrapper {
-		margin-bottom: 8px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+      @include desktop {
+         width: 35%;
+      }
 
-		&--rsvp {
-			// Add your styles for the RSVP image
-		}
+      &--date {
+         margin-bottom: 4px;
+         font-weight: bold;
+      }
 
-		&--fb,
-		&--twitter,
-		&--email,
-		&--website {}
-	}
+      &--location {
+         margin-bottom: 4px;
 
-	&__bottom-container {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
-		justify-content: space-between;
-		align-items: center;
+         @include desktop {
+            display: none;
+         }
+      }
 
-		&--button {
-			@include button;
-		}
-	}
+
+      &--venue {
+         margin-bottom: 4px;
+
+         @include desktop {
+            margin: 0;
+         }
+
+      }
+   }
+
+   &__center-container {
+
+      // display: flex;
+      @include desktop {
+         width: 35%;
+         margin-left: 100px;
+      }
+
+      &--location-mobile {
+         display: none;
+
+         @include desktop {
+            display: block;
+         }
+      }
+
+   }
+
+   &__social-wrapper {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include tablet {
+         // justify-content: right;
+         // align-self: self-end;
+      }
+
+      &--rsvp {
+         // Add your styles for the RSVP image
+      }
+
+      &--fb,
+      &--twitter,
+      &--email,
+      &--website {}
+   }
+
+   &__bottom-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+
+      @include tablet {
+         flex-direction: row;
+         justify-content: right;
+      }
+
+      &--button {
+         @include button;
+      }
+   }
 }
