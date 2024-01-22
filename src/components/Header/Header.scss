@@ -4,7 +4,7 @@
 .header {
 	background-color: #FFF;
 	padding: 0 40px;
-
+	position: relative;
 
 	@include tablet {
 		// min-height: 100vh;
@@ -24,17 +24,14 @@
 		align-items: center;
 		justify-content: space-between;
 
-		&__logo {
-
-			&--img {
-				width: 260px;
-				filter: invert(100%);
-			}
-		}
 
 		&__main-nav {
-			display: flex;
-			gap: 16px;
+			display: none;
+
+			@include desktop {
+				display: flex;
+				gap: 16px;
+			}
 
 			&--link {
 				font-size: 18px;
@@ -43,20 +40,262 @@
 					font-weight: bold;
 				}
 			}
+		}
 
+		&__main-nav-mobile {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			flex-grow: 1;
+			gap: 16px;
+
+			&--link {
+				font-size: 36px;
+
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+
+		&__logo {
+			&--img {
+				max-width: 160px;
+				filter: invert(100%);
+
+				@include tablet {
+					max-width: 200px;
+				}
+
+				@include desktop {
+					max-width: 260px;
+				}
+			}
 		}
 
 		&__social-nav {
-			display: flex;
-			align-items: center;
-			justify-content: right;
-			width: 370px;
-			gap: 16px;
+			display: none;
 
+			@include desktop {
+				display: flex;
+				align-items: center;
+				justify-content: right;
+				width: 370px;
+				gap: 16px;
+			}
 
 			&--link-img {
-				height: 18px;
+				height: 24px;
+
+				@include desktop {
+					height: 18px;
+				}
 			}
 		}
+
+		&__social-nav-mobile {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			gap: 16px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.mobile-menu {
+	height: calc(100vh - 85px);
+	width: 100%;
+	left: 0;
+	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+
+	@include tablet {
+		height: calc(100vh - 95px);
+	}
+
+	@include desktop {
+		display: none;
+	}
+}
+
+.mobile {
+	&__nav-button {
+		width: 35px;
+		height: 35px;
+		border: none;
+		position: relative;
+
+		@include desktop {
+			display: none;
+		}
+
+		&--first-line {
+			position: absolute;
+			top: auto;
+			left: auto;
+			width: 35px;
+			height: 1px;
+			background-color: #000;
+			transform: translateY(-8px);
+		}
+
+		&--middle-line {
+			position: absolute;
+			top: auto;
+			left: auto;
+			width: 35px;
+			height: 1px;
+			background-color: #000;
+		}
+
+		&--last-line {
+			position: absolute;
+			top: auto;
+			left: auto;
+			width: 35px;
+			height: 1px;
+			background-color: #000;
+			transform: translateY(8px);
+		}
+	}
+}
+
+
+// Animations
+
+.animate {
+	&-top {
+		animation: rotateTop 0.3s ease-in-out forwards;
+	}
+
+	&-middle {
+		animation: rotateCenter 0.3s ease-in-out forwards;
+	}
+
+	&-bottom {
+		animation: rotateBottom 0.3s ease-in-out forwards;
+	}
+}
+
+// Reverse Animations
+
+.reverse {
+	&-top {
+		animation: rotateTopReverse 0.3s ease-in-out forwards;
+	}
+
+	&-middle {
+		animation: rotateCenterReverse 0.3s ease-in-out forwards;
+	}
+
+	&-bottom {
+		animation: rotateBottomReverse 0.3s ease-in-out forwards;
+	}
+}
+
+
+// Fade In/Out Styles
+
+.fade-in {
+	animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fade-out {
+	animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+
+
+// Keyframes
+
+
+@keyframes rotateTop {
+	0% {
+		transform: rotate(0deg) translateY(-8px);
+	}
+
+	100% {
+		transform: rotate(-225deg) translateY(0px);
+	}
+}
+
+@keyframes rotateCenter {
+	0% {
+		transform: rotate(0deg) scaleX(1);
+	}
+
+	100% {
+		transform: rotate(-225deg) scaleX(0);
+	}
+}
+
+@keyframes rotateBottom {
+	0% {
+		transform: rotate(0deg) translateY(8px);
+	}
+
+	100% {
+		transform: rotate(225deg) translateY(0px);
+	}
+}
+
+
+// Reverse Keyframes
+
+@keyframes rotateTopReverse {
+	0% {
+		transform: rotate(-225deg) translateY(0px);
+	}
+
+	100% {
+		transform: rotate(0deg) translateY(-8px);
+	}
+}
+
+@keyframes rotateCenterReverse {
+	0% {
+		transform: rotate(-225deg) scaleX(0);
+	}
+
+	100% {
+		transform: rotate(0deg) scaleX(1);
+	}
+}
+
+@keyframes rotateBottomReverse {
+	0% {
+		transform: rotate(225deg) translateY(0px);
+	}
+
+	100% {
+		transform: rotate(0deg) translateY(8px);
+	}
+}
+
+
+//Fade In/Out
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }
