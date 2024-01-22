@@ -1,0 +1,99 @@
+@import '../../styles/partials/mixins';
+
+.signup {
+	background-color: #0f0f0f;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 44px 28px;
+
+	@include desktop {
+		padding: 54px 64px;
+	}
+
+	&__header {
+		// No styles added here
+	}
+
+}
+
+.signup-form {
+	width: 100%;
+	max-width: 1500px;
+
+
+	&__fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__top-container {
+		@include tablet {
+			display: flex;
+			gap: 8px;
+		}
+
+		&--sub-label {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 8px;
+			width: 100%;
+			font-size: 16px;
+			font-weight: lighter;
+		}
+
+		&--input {
+			background-color: #fff;
+			height: 50px;
+			padding: 0 8px;
+			color: #000;
+			transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+
+			&:hover {
+				background-color: rgb(162, 162, 162);
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 2px #fff;
+			}
+		}
+
+
+	}
+
+	&__label {
+		font-size: 18px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 8px;
+		width: 100%;
+	}
+
+	&__input {
+		background-color: #fff;
+		height: 50px;
+		padding: 0 8px;
+		color: #000;
+		transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+
+		&:hover {
+			background-color: rgb(162, 162, 162);
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 2px #fff;
+		}
+	}
+
+	&--submit-btn {
+		@include button;
+		margin-top: 16px;
+		width: 100%;
+
+		@include tablet {
+			// margin: 16px 0 0 0;
+		}
+	}
+}
