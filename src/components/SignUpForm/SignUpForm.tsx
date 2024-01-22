@@ -27,6 +27,12 @@ const SignUpForm = () => {
 			return;
 		}
 
+		// const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+		// if (!emailRegex.test(userFormData.email)) {
+		// 	alert('Please enter a valid email');
+		// 	return;
+		// }
+
 		setFormData(userFormData);
 		alert('Thank you for signing up!');
 	}
@@ -94,6 +100,7 @@ const SignUpForm = () => {
 							id="email"
 							name="email"
 							className="signup-form__input"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
 							required
 						/>
 					</label>
