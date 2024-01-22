@@ -1,0 +1,21 @@
+@import '../../styles/partials/mixins';
+
+.footer {
+	&__social-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 16px;
+		gap: 24px;
+
+		@include tablet {
+			padding: 24px;
+			gap: 32px;
+		}
+
+		@include desktop {
+			padding: 32px;
+			gap: 40px;
+		}
+	}
+}

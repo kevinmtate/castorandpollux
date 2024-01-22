@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 import Shows from './pages/Shows/Shows';
 import About from './pages/About/About';
 import Releases from './pages/Releases/Releases';
-import Footer from './components/Hero/Footer/Footer';
+import Footer from './components/Footer/Footer';
 import Contact from './pages/Contact/Contact';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 
