@@ -38,9 +38,10 @@
 		&--sub-label {
 			display: flex;
 			flex-direction: column;
-			margin-bottom: 8px;
+			margin-bottom: 12px;
+			gap: 4px;
 			width: 100%;
-			font-size: 16px;
+			font-size: 14px;
 			font-weight: lighter;
 		}
 
@@ -49,6 +50,9 @@
 			height: 50px;
 			padding: 0 8px;
 			color: #000;
+			border: 3px solid #0f0f0f;
+			font-size: 14px;
+			font-weight: normal;
 			transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 
 			&:hover {
@@ -64,11 +68,16 @@
 	}
 
 	&__label {
-		font-size: 18px;
+		font-size: 16px;
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 8px;
+		gap: 4px;
+		margin-bottom: 12px;
 		width: 100%;
+
+		&--legend {
+			padding-bottom: 14px;
+		}
 	}
 
 	&__input {
@@ -76,6 +85,9 @@
 		height: 50px;
 		padding: 0 8px;
 		color: #000;
+		border: 3px solid #0f0f0f;
+		font-size: 14px;
+		font-weight: normal;
 		transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 
 		&:hover {
@@ -95,5 +107,17 @@
 		@include tablet {
 			// margin: 16px 0 0 0;
 		}
+	}
+}
+
+.label {
+	&__padding {
+		padding: 0 2px;
+	}
+
+	&__required {
+		margin-left: 8px;
+		color: #9f9f9f;
+		font-size: 13px;
 	}
 }
