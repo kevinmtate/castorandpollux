@@ -64,3 +64,35 @@
 .divider {
 	font-size: 18px;
 }
+
+.bit-widget,
+.bit-layout-ipad,
+.bit-widget .bit-layout-ipad {
+	background-color: unset !important;
+	color: #fff !important;
+}
+
+.bit-follow-section-heading-text,
+.bit-event,
+.bit-venue,
+.bit-play-my-city-heading-text {
+	color: #fff !important;
+}
+
+
+.bit-widget-container {
+	@include desktop {
+		max-width: 1500px !important;
+		width: 100% !important;
+	}
+}
+
+.bit-social-share-icon-wrapper svg {
+	fill: #fff !important;
+}
+
+.bit-location {
+	@include desktop {
+		transform: translateY(100%);
+	}
+}

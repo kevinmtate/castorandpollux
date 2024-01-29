@@ -126,8 +126,10 @@ const SignUpForm = () => {
 				</fieldset>
 
 				<button className="signup-form--submit-btn" type='submit'>Submit</button>
-			</form>
 
+
+			</form>
+			{/* <iframe src="https://bandsintown.com/artist/84892/email_signup_form?headerTextColor=rgba(0,0,0,1)&backgroundColor=rgba(255,255,255,1)&ctaBackgroundColor=rgba(0,180,179,1)&title=Join the Constellation Crew Newsletter&headerTextStyle=normal&headerText=Sign up to get the latest updates&font=Helvetica&ctaIcon=show&ctaBorderRadius=4px&ctaBorderWidth=2px&ctaBorderColor=rgba(0,180,179,1)&ctaFontColor=rgba(255,255,255,1)&alignment=center&emailInputField=show&ctaLabel=Subscribe&layout=wide&locale=en" width="100%" height="220px" title="newsletter-widget"></iframe> */}
 		</section>
 	)
 }
