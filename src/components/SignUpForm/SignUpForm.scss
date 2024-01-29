@@ -121,3 +121,22 @@
 		font-size: 13px;
 	}
 }
+
+.iframe {
+	border: none;
+}
+
+iframe body {
+	background-color: blue !important;
+}
+
+.main,
+.main .container-center .layout-wide-center {
+	background-color: blue !important;
+}
+
+.container-center,
+.layout-wide-center {
+	background-color: unset !important;
+	color: #FFF !important;
+}
