@@ -22,7 +22,7 @@ const RecentReleases = () => {
 				<iframe
 					className='recent__releases--card'
 					style={{ borderRadius: "12px" }}
-					src="https://open.spotify.com/embed/track/0wCO8Ei3hn5lYbG3m6PIOU?utm_source=generator"
+					src="https://open.spotify.com/embed/track/5cexuf9cOVmteecGvt2ljY?utm_source=generator"
 					width="100%"
 					height="352"
 					frameBorder="0"
@@ -33,7 +33,7 @@ const RecentReleases = () => {
 				<iframe
 					className='recent__releases--card'
 					style={{ borderRadius: "12px" }}
-					src="https://open.spotify.com/embed/track/5cexuf9cOVmteecGvt2ljY?utm_source=generator"
+					src="https://open.spotify.com/embed/track/0wCO8Ei3hn5lYbG3m6PIOU?utm_source=generator"
 					width="100%"
 					height="352"
 					frameBorder="0"
