@@ -1,23 +1,37 @@
 import './Header.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logos/c&p-logo-full.png';
 import SocialMediaLink from '../SocialMediaLink/SocialMediaLink';
 
 const Header = () => {
 	const [mobileMenu, setMobileMenu] = useState(false);
+	const [hideMenu, setHideMenu] = useState(true);
+	const [isScrollingDisabled, setScrollingDisabled] = useState(false);
 
 	const handleMobileMenuToggleClick = () => {
 		if (mobileMenu === true) {
 			setMobileMenu(false);
+			setScrollingDisabled(false);
+			setTimeout(() => {
+				setHideMenu(true);
+			}, 500);
 		} else {
+			setHideMenu(false);
 			setMobileMenu(true);
+			window.scrollTo(0, 0);
+			setScrollingDisabled(true);
+
 		}
 	}
 
 	const handleMobileMenuClick = () => {
 		setMobileMenu(false);
 	}
+
+	useEffect(() => {
+		document.body.style.overflow = isScrollingDisabled ? 'hidden' : 'auto';
+	}, [isScrollingDisabled]);
 
 	return (
 		<header className="header">
@@ -91,62 +105,63 @@ const Header = () => {
 				</ul>
 			</nav>
 
-			<aside className={mobileMenu === true ? "mobile-menu fade-in" : mobileMenu === false ? "mobile-menu fade-out" : "mobile-menu"}>
-				<ul className="header-nav__main-nav-mobile">
-					<li className="header-nav__main-nav-mobile--link">
-						<Link to="/" className='' onClick={handleMobileMenuClick}  >Home</Link>
-					</li>
-					<li className="header-nav__main-nav-mobile--link">
-						<Link to="/about" className='' onClick={handleMobileMenuClick} >About</Link>
-					</li>
-					<li className="header-nav__main-nav-mobile--link">
-						<Link to="/releases" className='' onClick={handleMobileMenuClick} >Releases</Link>
-					</li>
-					<li className="header-nav__main-nav-mobile--link">
-						<Link to="/shows" className='' onClick={handleMobileMenuClick} >Shows</Link>
-					</li>
-					<li className="header-nav__main-nav-mobile--link">
-						<Link to="/contact" className='' onClick={handleMobileMenuClick} >Contact Us</Link>
-					</li>
-				</ul>
+			{hideMenu === false && (
+				<aside className={mobileMenu === true ? "mobile-menu fade-in" : mobileMenu === false ? "mobile-menu fade-out" : "mobile-menu"}>
+					<ul className="header-nav__main-nav-mobile">
+						<li className="header-nav__main-nav-mobile--link">
+							<Link to="/" className='' onClick={handleMobileMenuClick}  >Home</Link>
+						</li>
+						<li className="header-nav__main-nav-mobile--link">
+							<Link to="/about" className='' onClick={handleMobileMenuClick} >About</Link>
+						</li>
+						<li className="header-nav__main-nav-mobile--link">
+							<Link to="/releases" className='' onClick={handleMobileMenuClick} >Releases</Link>
+						</li>
+						<li className="header-nav__main-nav-mobile--link">
+							<Link to="/shows" className='' onClick={handleMobileMenuClick} >Shows</Link>
+						</li>
+						<li className="header-nav__main-nav-mobile--link">
+							<Link to="/contact" className='' onClick={handleMobileMenuClick} >Contact Us</Link>
+						</li>
+					</ul>
 
-				<ul className="header-nav__social-nav-mobile">
-					<SocialMediaLink
-						site='Spotify'
-						siteLink='https://open.spotify.com/artist/6fHUILCpBvfSHB48AEciPG?si=SQQEFDC-RrKzxtKizT5HHg&nd=1&dlsi=a21d5c44637f4ab0'
-					/>
+					<ul className={mobileMenu === true ? "header-nav__social-nav-mobile fade-in" : mobileMenu === false ? "header-nav__social-nav-mobile fade-in" : "header-nav__social-nav-mobile"}>
+						<SocialMediaLink
+							site='Spotify'
+							siteLink='https://open.spotify.com/artist/6fHUILCpBvfSHB48AEciPG?si=SQQEFDC-RrKzxtKizT5HHg&nd=1&dlsi=a21d5c44637f4ab0'
+						/>
 
-					<SocialMediaLink
-						site='Soundcloud'
-						siteLink='https://soundcloud.com/castorandpollux_music'
-					/>
+						<SocialMediaLink
+							site='Soundcloud'
+							siteLink='https://soundcloud.com/castorandpollux_music'
+						/>
 
-					<SocialMediaLink
-						site='Facebook'
-						siteLink='https://www.facebook.com/candpmusic/'
-					/>
+						<SocialMediaLink
+							site='Facebook'
+							siteLink='https://www.facebook.com/candpmusic/'
+						/>
 
-					<SocialMediaLink
-						site='Instagram'
-						siteLink='https://www.instagram.com/castorandpolluxmusic/'
-					/>
+						<SocialMediaLink
+							site='Instagram'
+							siteLink='https://www.instagram.com/castorandpolluxmusic/'
+						/>
 
-					<SocialMediaLink
-						site='Twitter'
-						siteLink='https://twitter.com/candpmusic'
-					/>
+						<SocialMediaLink
+							site='Twitter'
+							siteLink='https://twitter.com/candpmusic'
+						/>
 
-					<SocialMediaLink
-						site='Youtube'
-						siteLink='https://www.youtube.com/channel/UCp2BJQiRN36uNGac76eAS6A?view_as=subscriber'
-					/>
+						<SocialMediaLink
+							site='Youtube'
+							siteLink='https://www.youtube.com/channel/UCp2BJQiRN36uNGac76eAS6A?view_as=subscriber'
+						/>
 
-					<SocialMediaLink
-						site='Twitch'
-						siteLink='https://www.twitch.tv/castorandpolluxmusic'
-					/>
-				</ul>
-			</aside>
+						<SocialMediaLink
+							site='Twitch'
+							siteLink='https://www.twitch.tv/castorandpolluxmusic'
+						/>
+					</ul>
+				</aside>)}
 
 
 		</header>
