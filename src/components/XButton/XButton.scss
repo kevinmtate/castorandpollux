@@ -1,0 +1,144 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+.x-button {
+	width: 35px;
+	height: 35px;
+	border: none;
+	position: relative;
+
+	@include desktop {
+		display: none;
+	}
+
+	&__first-line {
+		position: absolute;
+		top: auto;
+		left: auto;
+		width: 35px;
+		height: 1px;
+		background-color: #000;
+		transform: translateY(-8px);
+	}
+
+	&__middle-line {
+		position: absolute;
+		top: auto;
+		left: auto;
+		width: 35px;
+		height: 1px;
+		background-color: #000;
+	}
+
+	&__last-line {
+		position: absolute;
+		top: auto;
+		left: auto;
+		width: 35px;
+		height: 1px;
+		background-color: #000;
+		transform: translateY(8px);
+	}
+}
+
+
+
+// Mobile Menu X Animations
+
+.animate {
+	&-top {
+		animation: rotateTop 0.3s ease-in-out forwards;
+	}
+
+	&-middle {
+		animation: rotateCenter 0.3s ease-in-out forwards;
+	}
+
+	&-bottom {
+		animation: rotateBottom 0.3s ease-in-out forwards;
+	}
+}
+
+// Reverse Animations
+
+.reverse {
+	&-top {
+		animation: rotateTopReverse 0.3s ease-in-out forwards;
+	}
+
+	&-middle {
+		animation: rotateCenterReverse 0.3s ease-in-out forwards;
+	}
+
+	&-bottom {
+		animation: rotateBottomReverse 0.3s ease-in-out forwards;
+	}
+}
+
+
+
+// Keyframes
+
+
+@keyframes rotateTop {
+	0% {
+		transform: rotate(0deg) translateY(-8px);
+	}
+
+	100% {
+		transform: rotate(-225deg) translateY(0px);
+	}
+}
+
+@keyframes rotateCenter {
+	0% {
+		transform: rotate(0deg) scaleX(1);
+	}
+
+	100% {
+		transform: rotate(-225deg) scaleX(0);
+	}
+}
+
+@keyframes rotateBottom {
+	0% {
+		transform: rotate(0deg) translateY(8px);
+	}
+
+	100% {
+		transform: rotate(225deg) translateY(0px);
+	}
+}
+
+
+// Reverse Keyframes
+
+@keyframes rotateTopReverse {
+	0% {
+		transform: rotate(-225deg) translateY(0px);
+	}
+
+	100% {
+		transform: rotate(0deg) translateY(-8px);
+	}
+}
+
+@keyframes rotateCenterReverse {
+	0% {
+		transform: rotate(-225deg) scaleX(0);
+	}
+
+	100% {
+		transform: rotate(0deg) scaleX(1);
+	}
+}
+
+@keyframes rotateBottomReverse {
+	0% {
+		transform: rotate(225deg) translateY(0px);
+	}
+
+	100% {
+		transform: rotate(0deg) translateY(8px);
+	}
+}
