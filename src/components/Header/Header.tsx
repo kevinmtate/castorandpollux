@@ -3,8 +3,16 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logos/c&p-logo-full.png';
 import SocialMediaLink from '../SocialMediaLink/SocialMediaLink';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
-const Header = () => {
+import { SocialLink } from '../../App';
+import XButton from '../XButton/XButton';
+
+interface HeaderProps {
+	socialLinks: SocialLink[];
+}
+
+const Header: React.FC<HeaderProps> = ({ socialLinks }) => {
 	const [mobileMenu, setMobileMenu] = useState(false);
 	const [hideMenu, setHideMenu] = useState(true);
 	const [isScrollingDisabled, setScrollingDisabled] = useState(false);
@@ -25,13 +33,10 @@ const Header = () => {
 		}
 	}
 
-	const handleMobileMenuClick = () => {
-		setMobileMenu(false);
-	}
-
 	useEffect(() => {
 		document.body.style.overflow = isScrollingDisabled ? 'hidden' : 'auto';
 	}, [isScrollingDisabled]);
+
 
 	return (
 		<header className="header">
@@ -41,9 +46,6 @@ const Header = () => {
 					<li className="header-nav__main-nav--link">
 						<Link to="/" className='' >Home</Link>
 					</li>
-					{/* <li className="header-nav__main-nav--link">
-						<Link to="/about" className='' >About</Link>
-					</li> */}
 					<li className="header-nav__main-nav--link">
 						<Link to="/releases" className='' >Releases</Link>
 					</li>
@@ -60,109 +62,24 @@ const Header = () => {
 					<img className='header-nav__logo--img' src={Logo} alt='Castor & Pollux Logo' />
 				</Link>
 
-				<button className="mobile__nav-button" onClick={handleMobileMenuToggleClick}>
-					<div className={mobileMenu === true ? "mobile__nav-button--middle-line animate-top" : mobileMenu === false ? "mobile__nav-button--middle-line reverse-top" : "mobile__nav-button--middle-line"}></div>
-					<div className={mobileMenu === true ? "mobile__nav-button--first-line animate-middle" : mobileMenu === false ? "mobile__nav-button--first-line reverse-middle" : "mobile__nav-button--first-line"}></div>
-					<div className={mobileMenu === true ? "mobile__nav-button--last-line animate-bottom" : mobileMenu === false ? "mobile__nav-button--last-line reverse-bottom" : "mobile__nav-button--last-line"}></div>
-				</button>
-
+				<XButton mobileMenu={mobileMenu} handleMobileMenuToggleClick={handleMobileMenuToggleClick} />
 
 				<ul className="header-nav__social-nav">
-					<SocialMediaLink
-						site='Spotify'
-						siteLink='https://open.spotify.com/artist/6fHUILCpBvfSHB48AEciPG?si=SQQEFDC-RrKzxtKizT5HHg&nd=1&dlsi=a21d5c44637f4ab0'
-					/>
-
-					<SocialMediaLink
-						site='Soundcloud'
-						siteLink='https://soundcloud.com/castorandpollux_music'
-					/>
-
-					<SocialMediaLink
-						site='Facebook'
-						siteLink='https://www.facebook.com/candpmusic/'
-					/>
-
-					<SocialMediaLink
-						site='Instagram'
-						siteLink='https://www.instagram.com/castorandpolluxmusic/'
-					/>
-
-					<SocialMediaLink
-						site='Twitter'
-						siteLink='https://twitter.com/candpmusic'
-					/>
-
-					<SocialMediaLink
-						site='Youtube'
-						siteLink='https://www.youtube.com/channel/UCp2BJQiRN36uNGac76eAS6A?view_as=subscriber'
-					/>
-
-					<SocialMediaLink
-						site='Twitch'
-						siteLink='https://www.twitch.tv/castorandpolluxmusic'
-					/>
+					{socialLinks.map((socialLink, key) => {
+						return (
+							<SocialMediaLink
+								key={key}
+								site={socialLink.site}
+								siteLink={socialLink.siteLink}
+							/>
+						)
+					})}
 				</ul>
 			</nav>
 
 			{hideMenu === false && (
-				<aside className={mobileMenu === true ? "mobile-menu fade-in" : mobileMenu === false ? "mobile-menu fade-out" : "mobile-menu"}>
-					<ul className="header-nav__main-nav-mobile">
-						<li className="header-nav__main-nav-mobile--link">
-							<Link to="/" className='' onClick={handleMobileMenuClick}  >Home</Link>
-						</li>
-						<li className="header-nav__main-nav-mobile--link">
-							<Link to="/about" className='' onClick={handleMobileMenuClick} >About</Link>
-						</li>
-						<li className="header-nav__main-nav-mobile--link">
-							<Link to="/releases" className='' onClick={handleMobileMenuClick} >Releases</Link>
-						</li>
-						<li className="header-nav__main-nav-mobile--link">
-							<Link to="/shows" className='' onClick={handleMobileMenuClick} >Shows</Link>
-						</li>
-						<li className="header-nav__main-nav-mobile--link">
-							<Link to="/contact" className='' onClick={handleMobileMenuClick} >Contact Us</Link>
-						</li>
-					</ul>
-
-					<ul className={mobileMenu === true ? "header-nav__social-nav-mobile fade-in" : mobileMenu === false ? "header-nav__social-nav-mobile fade-in" : "header-nav__social-nav-mobile"}>
-						<SocialMediaLink
-							site='Spotify'
-							siteLink='https://open.spotify.com/artist/6fHUILCpBvfSHB48AEciPG?si=SQQEFDC-RrKzxtKizT5HHg&nd=1&dlsi=a21d5c44637f4ab0'
-						/>
-
-						<SocialMediaLink
-							site='Soundcloud'
-							siteLink='https://soundcloud.com/castorandpollux_music'
-						/>
-
-						<SocialMediaLink
-							site='Facebook'
-							siteLink='https://www.facebook.com/candpmusic/'
-						/>
-
-						<SocialMediaLink
-							site='Instagram'
-							siteLink='https://www.instagram.com/castorandpolluxmusic/'
-						/>
-
-						<SocialMediaLink
-							site='Twitter'
-							siteLink='https://twitter.com/candpmusic'
-						/>
-
-						<SocialMediaLink
-							site='Youtube'
-							siteLink='https://www.youtube.com/channel/UCp2BJQiRN36uNGac76eAS6A?view_as=subscriber'
-						/>
-
-						<SocialMediaLink
-							site='Twitch'
-							siteLink='https://www.twitch.tv/castorandpolluxmusic'
-						/>
-					</ul>
-				</aside>)}
-
+        <MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} socialLinks={socialLinks} />
+			)}
 
 		</header>
 	)

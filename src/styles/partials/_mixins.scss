@@ -3,27 +3,27 @@
 
 // Media Queries
 @mixin tablet {
-   @media (min-width: $tablet-breakpoint) {
-      @content;
-   }
+	@media (min-width: $tablet-breakpoint) {
+		@content;
+	}
 }
 
 @mixin desktop-header {
-   @media (min-width: $header-desktop-breakpoint) {
-      @content;
-   }
+	@media (min-width: $header-desktop-breakpoint) {
+		@content;
+	}
 }
 
 @mixin desktop {
-   @media (min-width: $desktop-breakpoint) {
-      @content;
-   }
+	@media (min-width: $desktop-breakpoint) {
+		@content;
+	}
 }
 
 @mixin desktop-large {
-   @media (min-width: $desktop-large-breakpoint) {
-      @content;
-   }
+	@media (min-width: $desktop-large-breakpoint) {
+		@content;
+	}
 }
 
 
@@ -46,29 +46,29 @@
 
 // BUTTONS
 @mixin button {
-   border: 1px solid $white;
-   border-radius: 6px;
-   cursor: pointer;
-   font-size: 16px;
-   font-weight: bold;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 224px;
-   height: 40px;
-   transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
+	border: 1px solid #000;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 40px;
+	transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
 
-   &:hover {
-      border: 1px solid lightslategray;
-      color: lightslategray;
-   }
+	&:hover {
+		border: 1px solid lightslategray;
+		color: lightslategray;
+	}
 
-   @include tablet {
-      width: 200px;
-      font-size: 18px;
-   }
+	@include tablet {
+		width: 200px;
+		font-size: 18px;
+	}
 
-   @include desktop {
-      height: 45px;
-   }
+	@include desktop {
+		height: 45px;
+	}
 }

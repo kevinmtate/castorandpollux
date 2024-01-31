@@ -26,9 +26,9 @@ const SocialMediaLink: React.FC<SocialMediaLinkProps> = ({ site, siteLink }) => 
 	const siteLogo = logos[site.toLowerCase()];
 
 	return (
-		<li className="header-nav__social-nav--link">
+		<li className="social-media-link">
 			<a href={siteLink} className='' >
-				<img src={siteLogo} alt={`Castor & Pollux - ${site}`} className="header-nav__social-nav--link-img" />
+				<img src={siteLogo} alt={`Castor & Pollux - ${site}`} className="social-media-link__img" />
 			</a>
 		</li>
 	)

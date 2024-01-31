@@ -1,0 +1,86 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+
+.mobile-menu {
+	height: calc(100vh - 85px);
+	width: 100%;
+	left: 0;
+	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	z-index: 10;
+
+	@include tablet {
+		height: calc(100vh - 95px);
+	}
+
+	@include desktop {
+		display: none;
+	}
+
+	&__main-nav-mobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+		gap: 16px;
+
+		&--link {
+			font-size: 36px;
+
+			&:hover {
+				font-weight: bold;
+			}
+		}
+	}
+
+	&__social-nav-mobile {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		gap: 16px;
+		margin-bottom: 40px;
+	}
+}
+
+
+
+
+// Fade In/Out Styles
+
+.fade-in {
+	animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fade-out {
+	animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+
+
+//Fade In/Out
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}

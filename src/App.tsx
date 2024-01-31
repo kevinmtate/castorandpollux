@@ -11,12 +11,21 @@ import Footer from './components/Footer/Footer';
 import Contact from './pages/Contact/Contact';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 
+import socialLinksJson from './data/social_media_links.json'
+
+export interface SocialLink {
+	site: string;
+	siteLink: string;
+}
+
+const socialLinks: SocialLink[] = socialLinksJson;
+
 const App = () => {
 	return (
 		<div className="App">
 
 			<BrowserRouter>
-				<Header />
+				<Header socialLinks={socialLinks} />
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route path='/shows' element={<Shows />} />
@@ -25,7 +34,7 @@ const App = () => {
 					<Route path='/contact' element={<Contact />} />
 					<Route path='*' element={<PageNotFound />} />
 				</Routes>
-				<Footer />
+				<Footer socialLinks={socialLinks} />
 			</BrowserRouter>
 
 		</div>
