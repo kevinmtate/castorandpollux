@@ -78,9 +78,8 @@ const Header: React.FC<HeaderProps> = ({ socialLinks }) => {
 			</nav>
 
 			{hideMenu === false && (
-				<MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} socialLinks={socialLinks} />
+        <MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} socialLinks={socialLinks} />
 			)}
-
 
 		</header>
 	)
