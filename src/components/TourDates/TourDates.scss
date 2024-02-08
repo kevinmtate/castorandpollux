@@ -13,10 +13,20 @@
 	align-items: center;
 
 	@include desktop {
-		padding: 54px 64px;
+		padding: 64px 64px;
 	}
 
-	&__header {}
+	&__header {
+		text-transform: uppercase;
+		@include h1-mobile;
+		font-size: 28px;
+
+		@include tablet {
+			@include h1-tablet__desk;
+		}
+
+		@include desktop {}
+	}
 
 	&__follow-container {
 		padding: 20px 0;

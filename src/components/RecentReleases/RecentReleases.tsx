@@ -80,9 +80,13 @@ const RecentReleases = () => {
 					<div className='recent__releases--click-area' onClick={handleClick} />
 				</div>
 			</div>
+
+
 			<a className={`soundcloud__button--open ${showSoundcloud ? "button-hide" : "button-show"}`} onClick={handleClick}>+</a>
+
 			<aside className={`soundcloud ${showSoundcloud ? "ani-expand" : "ani-contract"}`}>
 				<iframe
+					className='soundcloud__iframe'
 					width="100%"
 					height="450"
 					scrolling="no"
@@ -104,6 +108,7 @@ const RecentReleases = () => {
 				</div>
 				<a className={`soundcloud__button ${showSoundcloud ? "button-show" : "button-hide"}`} onClick={handleClose}>click to close</a>
 			</aside>
+
 		</section >
 	)
 }

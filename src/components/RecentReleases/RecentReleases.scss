@@ -7,22 +7,36 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	// overflow: hidden;
+	padding: 32px 0;
 
 	@include tablet {
-		// min-height: 100vh;
+		padding: 40px 0;
 	}
 
 	@include desktop-header {
 		// min-height: 100vh;
 	}
 
-	@include desktop {}
+	@include desktop {
+		padding: 64px 32px;
+	}
 
 	&__header {
 		text-align: center;
-		// margin-top: 52px;
-		margin-bottom: 40px;
+		margin-bottom: 24px;
+		@include h1-mobile;
+		font-size: 28px;
+		text-transform: uppercase;
+		font-weight: bolder;
+
+		@include tablet {
+			margin-bottom: 32px;
+			@include h1-tablet__desk;
+		}
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
 	}
 
 
@@ -32,18 +46,19 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 
 		@include tablet {
 			flex-direction: row;
 			flex-wrap: wrap;
-			margin-bottom: 20px;
+			margin-bottom: 32px;
 		}
 
 		@include desktop-header {}
 
 		@include desktop {
 			flex-wrap: nowrap;
+			margin-bottom: 40px;
 		}
 
 		&--card {
@@ -66,19 +81,12 @@
 			left: 0;
 			width: 100%;
 			height: 352px;
-			// z-index: 2;
 			cursor: pointer;
 			width: 300px;
-			// background-color: #000;
-			// opacity: 10%;
 
-			@include tablet {
-				// max-width: 40%;
-			}
+			@include tablet {}
 
-			@include desktop {
-				// width: 300px;
-			}
+			@include desktop {}
 		}
 	}
 
@@ -96,7 +104,6 @@
 	width: 100%;
 	max-width: 1200px;
 	overflow: hidden;
-	// height: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -105,9 +112,12 @@
 		padding: 0 60px;
 	}
 
+	&__iframe {
+		margin-bottom: 32px;
+	}
+
 	&__button {
 		@include button;
-		margin: 24px 0;
 		border-width: 0 1px;
 		font-weight: normal;
 		transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -195,14 +205,12 @@
 
 	100% {
 		max-height: 24px;
-		margin-bottom: 24px;
 	}
 }
 
 @keyframes button-hide {
 	0% {
 		max-height: 24px;
-		margin-bottom: 24px;
 	}
 
 	100% {
