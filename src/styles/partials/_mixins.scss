@@ -2,6 +2,12 @@
 @import './fonts';
 
 // Media Queries
+@mixin custom($min-width) {
+	@media (min-width: $min-width) {
+		@content;
+	}
+}
+
 @mixin tablet {
 	@media (min-width: $tablet-breakpoint) {
 		@content;
@@ -42,6 +48,93 @@
 //     font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
 //     font-weight: lighter;
 // }
+
+
+// Typography
+
+
+@mixin font-reg {
+	// font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-weight: normal;
+}
+
+@mixin font-bold {
+	// font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-weight: bold;
+}
+
+@mixin font-light {
+	// font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-weight: lighter;
+}
+
+
+@mixin body-tablet__desk {
+	font-size: 14px;
+	line-height: 22px;
+	@include font-reg();
+}
+
+@mixin h1-tablet__desk {
+	font-size: 33px;
+	@include font-bold();
+}
+
+@mixin h2-tablet__desk {
+	font-size: 24px;
+	@include font-bold();
+}
+
+@mixin h3-tablet__desk {
+	font-size: 16px;
+	@include font-bold();
+}
+
+@mixin p-tablet__desk {
+	font-size: 14px;
+	@include font-reg();
+}
+
+@mixin labels-buttons-tablet_desk {
+	text-transform: uppercase;
+	font-size: 12px;
+	@include font-bold();
+}
+
+
+// Text Styling -- MOBILE
+@mixin body-mobile {
+	font-size: 13px;
+	@include font-reg();
+}
+
+@mixin h1-mobile {
+	font-size: 24px;
+	@include font-bold();
+}
+
+@mixin h2-mobile {
+	font-size: 16px;
+	@include font-bold();
+}
+
+@mixin h3-mobile {
+	font-size: 16px;
+	@include font-bold();
+}
+
+@mixin p-mobile {
+	font-size: 13px;
+	@include font-reg();
+}
+
+@mixin labels-buttons-mobile {
+	text-transform: uppercase;
+	font-size: 13px;
+	@include font-bold();
+}
+
+
 
 
 // BUTTONS
