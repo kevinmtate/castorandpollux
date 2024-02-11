@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ socialLinks }) => {
 						<Link to="/shows" className='' >Shows</Link>
 					</li>
 					<li className="header-nav__main-nav--link">
-						<Link to="/contact" className='' >Contact Us</Link>
+						<Link to="/contact" className='' >Contact</Link>
 					</li>
 				</ul>
 
@@ -78,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ socialLinks }) => {
 			</nav>
 
 			{hideMenu === false && (
-        <MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} socialLinks={socialLinks} />
+				<MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} socialLinks={socialLinks} />
 			)}
 
 		</header>

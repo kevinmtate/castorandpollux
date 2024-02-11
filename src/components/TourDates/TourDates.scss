@@ -98,8 +98,12 @@
 .bit-venue,
 .bit-play-my-city-heading-text {
 	color: #fff !important;
+	@include montserrat-font;
 }
 
+.bit-play-my-city-heading-text {
+	font-weight: 800;
+}
 
 .bit-widget-container {
 	@include desktop {
