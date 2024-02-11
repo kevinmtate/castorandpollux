@@ -3,7 +3,7 @@
 
 .hero {
 	// overflow: hidden;
-	// min-height: 100vh;
+	max-height: calc(100vh - 114.71px);
 	object-fit: cover;
 	background-color: #000;
 	width: 100%;
@@ -19,4 +19,6 @@
 	@include desktop {
 		// min-height: 100vh;
 	}
+
+	&__video {}
 }
