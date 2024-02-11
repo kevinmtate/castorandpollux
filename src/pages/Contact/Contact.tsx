@@ -12,6 +12,7 @@ const Contact = () => {
 				<div className="contact__container">
 					<aside className="contact__container-column">
 						<h3 className="contact__container-column--header">Castor & Pollux</h3>
+						<p className="contact__container-column--text">Promos/Demos</p>
 						<a
 							href="castorandpollux@castorandpolluxofficial.com"
 							className="contact__container-column--link"
