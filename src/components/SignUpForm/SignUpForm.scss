@@ -142,11 +142,9 @@ iframe html {
 	overflow: hidden;
 }
 
-
-
-.main,
-.main .container-center .layout-wide-center {
-	background-color: blue !important;
+iframe html .newsletter-header {
+	@include montserrat-font;
+	font-size: 40px;
 }
 
 .container-center,
