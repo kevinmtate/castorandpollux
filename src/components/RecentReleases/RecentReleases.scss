@@ -118,7 +118,7 @@
 	&__button {
 		@include button;
 		border-width: 0 1px;
-		font-weight: normal;
+		font-weight: 400;
 		transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
 		@include desktop {
@@ -136,7 +136,6 @@
 			border-width: 0 1px;
 			font-size: 24px;
 			overflow: hidden;
-			font-weight: lighter;
 			transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
 			@include tablet {

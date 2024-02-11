@@ -12,9 +12,7 @@
 		padding: 54px 64px;
 	}
 
-	&__header {
-		// No styles added here
-	}
+	&__header {}
 
 }
 
@@ -124,11 +122,27 @@
 
 .iframe {
 	border: none;
+	overflow: hidden;
 }
 
-iframe body {
-	background-color: blue !important;
+iframe.iframe {
+	height: 360px;
+	overflow: hidden;
+
+	@include tablet {
+		height: 290px;
+	}
+
+	@include desktop {
+		height: 220px;
+	}
 }
+
+iframe html {
+	overflow: hidden;
+}
+
+
 
 .main,
 .main .container-center .layout-wide-center {

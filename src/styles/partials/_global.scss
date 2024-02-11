@@ -1,5 +1,6 @@
 @import './variables.scss';
+@import './mixins';
 
 body {
-	font-family: 'Roboto', Arial, sans-serif;
+	@include montserrat-font;
 }

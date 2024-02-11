@@ -4,7 +4,7 @@
 .header {
 	background-color: #FFF;
 	padding: 0 40px;
-	position: relative;
+	// position: relative;
 
 	@include tablet {
 		// min-height: 100vh;
@@ -23,17 +23,21 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
 
 		&__main-nav {
 			display: none;
 
 			@include desktop {
 				display: flex;
+				width: 30%;
 				gap: 16px;
 			}
 
 			&--link {
 				font-size: 18px;
+				width: 80px;
+				text-align: center;
 
 				&:hover {
 					font-weight: bold;
@@ -42,6 +46,12 @@
 		}
 
 		&__logo {
+			@include desktop {
+				// position: absolute;
+				// top: 50%;
+				// left: 50%;
+			}
+
 			&--img {
 				max-width: 160px;
 				filter: invert(100%);
@@ -63,7 +73,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: right;
-				width: 370px;
+				width: 30%;
 				gap: 16px;
 			}
 		}

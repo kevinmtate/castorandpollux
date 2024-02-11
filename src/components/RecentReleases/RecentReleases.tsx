@@ -102,7 +102,7 @@ const RecentReleases = () => {
 					overflow: "hidden",
 					whiteSpace: "nowrap",
 					textOverflow: "ellipsis",
-					fontFamily: " Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+					fontFamily: "Montserrat,Helvetica Neue,Arial,sans-serif",
 					fontWeight: 100
 				}}>
 				</div>
