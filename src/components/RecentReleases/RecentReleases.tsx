@@ -23,6 +23,21 @@ const RecentReleases = () => {
 					<iframe
 						className='recent__releases--card'
 						style={{ borderRadius: "12px" }}
+						src="https://open.spotify.com/embed/track/2nibAHzEdndxBW3cptLffC?utm_source=generator"
+						width="100%"
+						height="352"
+						frameBorder="0"
+						allowFullScreen={true}
+						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+						loading="lazy"
+					>
+					</iframe>
+					<div className='recent__releases--click-area' onClick={handleClick} />
+				</div>
+				<div className='recent__releases-container'>
+					<iframe
+						className='recent__releases--card'
+						style={{ borderRadius: "12px" }}
 						src="https://open.spotify.com/embed/track/3guu1NVq5cglm8yzIbUqAp?utm_source=generator"
 						width="100%"
 						height="352"
@@ -54,21 +69,6 @@ const RecentReleases = () => {
 						className='recent__releases--card'
 						style={{ borderRadius: "12px" }}
 						src="https://open.spotify.com/embed/track/0wCO8Ei3hn5lYbG3m6PIOU?utm_source=generator"
-						width="100%"
-						height="352"
-						frameBorder="0"
-						allowFullScreen={true}
-						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-						loading="lazy"
-					>
-					</iframe>
-					<div className='recent__releases--click-area' onClick={handleClick} />
-				</div>
-				<div className='recent__releases-container'>
-					<iframe
-						className='recent__releases--card'
-						style={{ borderRadius: "12px" }}
-						src="https://open.spotify.com/embed/track/2nibAHzEdndxBW3cptLffC?utm_source=generator"
 						width="100%"
 						height="352"
 						frameBorder="0"
