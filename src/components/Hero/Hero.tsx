@@ -11,12 +11,11 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<section className='hero'>
-			{/* <img src={heroImg} alt="" className="hero__img" /> */}
-			<video className='hero__video' ref={videoRef} loop muted>
-				<source src={heroVid} type="video/mp4" />
-			</video>
-		</section>
+		// <section className='hero'>
+		<video className='hero__video' ref={videoRef} loop muted autoPlay>
+			<source src={heroVid} type="video/mp4" />
+		</video>
+		// </section>
 	)
 }
 
