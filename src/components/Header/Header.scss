@@ -3,20 +3,14 @@
 
 .header {
 	background-color: #FFF;
-	padding: 0 40px;
-	// position: relative;
+	padding: 0 24px;
 
 	@include tablet {
-		// min-height: 100vh;
+		padding: 0 40px;
 	}
 
 	@include desktop-header {
 		max-height: 114.71px;
-	}
-
-
-	@include desktop {
-		// min-height: 100vh;
 	}
 
 	&-nav {
