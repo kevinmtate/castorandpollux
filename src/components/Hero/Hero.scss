@@ -3,22 +3,45 @@
 
 .hero {
 	// overflow: hidden;
-	max-height: calc(100vh - 114.71px);
-	object-fit: cover;
+	min-height: calc(100vh - 114.71px);
+	// object-fit: cover;
 	background-color: #000;
 	width: 100%;
 
 	@include tablet {
 		// min-height: 100vh;
+		// min-height: calc(100vh - 114.71px);
 	}
 
 	@include desktop-header {
 		// min-height: 100vh;
 	}
 
-	@include desktop {
-		// min-height: 100vh;
-	}
+	@include desktop {}
 
-	&__video {}
+	&__video {
+		min-height: calc(100vh - 89.054px);
+		// height: 100%;
+		width: 100%;
+		object-fit: cover;
+
+		@include tablet {
+			min-height: calc(100vh - 99.313px);
+			max-height: calc(100vh - 99.313px);
+			// min-height: calc(100dvh - 114.71px);
+			// min-height: 100vh;
+		}
+
+		@include desktop-header {
+			// min-height: calc(100vh - 99.313px);
+			min-height: calc(100vh - 114.71px);
+			max-height: calc(100vh - 114.71px);
+			// min-height: 100vh;
+		}
+
+		@include desktop {
+			// min-height: calc(100vh - 114.71px);
+			// min-height: 100vh;
+		}
+	}
 }
