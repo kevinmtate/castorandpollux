@@ -1,5 +1,5 @@
 import SocialMediaLink from "../SocialMediaLink/SocialMediaLink"
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import { SocialLink } from '../../App';
 
@@ -21,16 +21,16 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ mobileMenu, setMobileMenu, soci
 		<aside className={`mobile-menu ${mobileMenu ? "fade-in" : "fade-out"}`}>
 			<ul className="mobile-menu__main-nav-mobile">
 				<li className="mobile-menu__main-nav-mobile--link">
-					<Link to="/" className='' onClick={handleMobileMenuClick}  >Home</Link>
+					<NavLink to="/" className='' onClick={handleMobileMenuClick}  >Home</NavLink>
 				</li>
 				<li className="mobile-menu__main-nav-mobile--link">
-					<Link to="/releases" className='' onClick={handleMobileMenuClick} >Releases</Link>
+					<NavLink to="/releases" className='' onClick={handleMobileMenuClick} >Releases</NavLink>
 				</li>
 				<li className="mobile-menu__main-nav-mobile--link">
-					<Link to="/shows" className='' onClick={handleMobileMenuClick} >Shows</Link>
+					<NavLink to="/shows" className='' onClick={handleMobileMenuClick} >Shows</NavLink>
 				</li>
 				<li className="mobile-menu__main-nav-mobile--link">
-					<Link to="/contact" className='' onClick={handleMobileMenuClick} >Contact Us</Link>
+					<NavLink to="/contact" className='' onClick={handleMobileMenuClick} >Contact Us</NavLink>
 				</li>
 			</ul>
 

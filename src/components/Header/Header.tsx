@@ -1,6 +1,6 @@
 import './Header.scss';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../assets/logos/c&p-logo-full.png';
 import SocialMediaLink from '../SocialMediaLink/SocialMediaLink';
 import MobileMenu from '../MobileMenu/MobileMenu';
@@ -44,16 +44,16 @@ const Header: React.FC<HeaderProps> = ({ socialLinks }) => {
 			<nav className="header-nav">
 				<ul className="header-nav__main-nav">
 					<li className="header-nav__main-nav--link">
-						<Link to="/" className='' >Home</Link>
+						<NavLink to="/" className='' >Home</NavLink>
 					</li>
 					<li className="header-nav__main-nav--link">
-						<Link to="/releases" className='' >Releases</Link>
+						<NavLink to="/releases" className='' >Releases</NavLink>
 					</li>
 					<li className="header-nav__main-nav--link">
-						<Link to="/shows" className='' >Shows</Link>
+						<NavLink to="/shows" className='' >Shows</NavLink>
 					</li>
 					<li className="header-nav__main-nav--link">
-						<Link to="/contact" className='' >Contact</Link>
+						<NavLink to="/contact" className='' >Contact</NavLink>
 					</li>
 				</ul>
 
