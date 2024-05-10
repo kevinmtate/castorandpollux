@@ -23,6 +23,36 @@ const RecentReleases = () => {
 					<iframe
 						className='recent__releases--card'
 						style={{ borderRadius: "12px" }}
+						src="https://open.spotify.com/embed/track/166gOOD0FWGWfAtgtBSdzO?utm_source=generator"
+						width="100%"
+						height="352"
+						frameBorder="0"
+						allowFullScreen={true}
+						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+						loading="lazy"
+					>
+					</iframe>
+					<div className='recent__releases--click-area' onClick={handleClick} />
+				</div>
+				<div className='recent__releases-container'>
+					<iframe
+						className='recent__releases--card'
+						style={{ borderRadius: "12px" }}
+						src="https://open.spotify.com/embed/track/63unE8VKOuVnSUl1gM7AmB?utm_source=generator"
+						width="100%"
+						height="352"
+						frameBorder="0"
+						allowFullScreen={true}
+						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+						loading="lazy"
+					>
+					</iframe>
+					<div className='recent__releases--click-area' onClick={handleClick} />
+				</div>
+				<div className='recent__releases-container'>
+					<iframe
+						className='recent__releases--card'
+						style={{ borderRadius: "12px" }}
 						src="https://open.spotify.com/embed/track/2nibAHzEdndxBW3cptLffC?utm_source=generator"
 						width="100%"
 						height="352"
@@ -49,36 +79,7 @@ const RecentReleases = () => {
 					</iframe>
 					<div className='recent__releases--click-area' onClick={handleClick} />
 				</div>
-				<div className='recent__releases-container'>
-					<iframe
-						className='recent__releases--card'
-						style={{ borderRadius: "12px" }}
-						src="https://open.spotify.com/embed/track/5cexuf9cOVmteecGvt2ljY?utm_source=generator"
-						width="100%"
-						height="352"
-						frameBorder="0"
-						allowFullScreen={true}
-						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-						loading="lazy"
-					>
-					</iframe>
-					<div className='recent__releases--click-area' onClick={handleClick} />
-				</div>
-				<div className='recent__releases-container'>
-					<iframe
-						className='recent__releases--card'
-						style={{ borderRadius: "12px" }}
-						src="https://open.spotify.com/embed/track/0wCO8Ei3hn5lYbG3m6PIOU?utm_source=generator"
-						width="100%"
-						height="352"
-						frameBorder="0"
-						allowFullScreen={true}
-						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-						loading="lazy"
-					>
-					</iframe>
-					<div className='recent__releases--click-area' onClick={handleClick} />
-				</div>
+
 			</div>
 
 

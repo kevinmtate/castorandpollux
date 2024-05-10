@@ -28,7 +28,7 @@ const Contact = () => {
 							href="mgmt@castorandpolluxofficial.com"
 							className="contact__container-column--link"
 						>
-							mgmt@castorandpolluxofficial.com
+							madeleine@88musicmgmt.com
 						</a>
 					</aside>
 				</div>

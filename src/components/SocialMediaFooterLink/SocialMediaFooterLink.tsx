@@ -7,6 +7,7 @@ import soundcloudLogo from '../../assets/logos/social-icons/soundcloud.svg';
 import twitterLogo from '../../assets/logos/social-icons/twitter.svg';
 import youtubeLogo from '../../assets/logos/social-icons/youtube.svg';
 import twitchLogo from '../../assets/logos/social-icons/twitch.svg';
+import tiktokLogo from '../../assets/logos/social-icons/tiktok.svg';
 
 interface SocialMediaFooterLinkProps {
 	site: string;
@@ -21,7 +22,8 @@ const SocialMediaFooterLink: React.FC<SocialMediaFooterLinkProps> = ({ site, sit
 		soundcloud: soundcloudLogo,
 		twitter: twitterLogo,
 		youtube: youtubeLogo,
-		twitch: twitchLogo
+		twitch: twitchLogo,
+		tiktok: tiktokLogo
 	}
 	const siteLogo = logos[site.toLowerCase()];
 
