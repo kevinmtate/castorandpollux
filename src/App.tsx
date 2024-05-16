@@ -23,10 +23,10 @@ const App = () => {
 	return (
 		<div className="App">
 
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Header socialLinks={socialLinks} />
 				<Routes>
-					<Route path='/castorandpollux' element={<HomePage />} />
+					<Route path='/' element={<HomePage />} />
 					<Route path='/shows' element={<Shows />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/releases' element={<Releases />} />
