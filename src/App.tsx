@@ -26,7 +26,7 @@ const App = () => {
 			<BrowserRouter>
 				<Header socialLinks={socialLinks} />
 				<Routes>
-					<Route path='/' element={<HomePage />} />
+					<Route path='/castorandpollux' element={<HomePage />} />
 					<Route path='/shows' element={<Shows />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/releases' element={<Releases />} />
