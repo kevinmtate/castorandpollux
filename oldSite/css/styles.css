@@ -1,0 +1,388 @@
+/* SEMANTICS */
+html {
+  font-family: 'Space Mono', monospace;
+  scroll-behavior: smooth;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+/* INTRO */
+#introContainer {
+  background-image: url('../media/giphy-downsized-large.gif');
+  background-size: 100% 100%;
+}
+
+#introLogo {
+  animation: introLogoAnimation 5s ease-in;
+  z-index: 1;
+  width: 250px;
+}
+
+@keyframes introLogoAnimation {
+  0% { opacity: 0; }
+  90% { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+#introTransition {
+  animation: introTransitionAnimation 9s ease-in;
+  background-color: white;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+@keyframes introTransitionAnimation {
+  0% { opacity: 0 }
+  75% { opacity: .1 }
+  100% { opacity: 1 }
+}
+
+#skipIntro {
+  /* background-color: rgba(0,0,0,.5); */
+  bottom: 25px;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* HEADER */
+header {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+#starsContainer {
+  /* background: linear-gradient(90deg, rgba(9,11,18,1) 0%, rgba(18,25,35,1) 50%, rgba(9,11,18,1) 100%); */
+  /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+  background: black;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.mainLogo {
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity .5s ease-out, visibility .5s;
+  width: 250px;
+}
+
+.hamburgerNav {
+  cursor: pointer;
+  height: 50px;
+  left: 20px;
+  opacity: 1;
+  position: fixed;
+  top: 15px;
+  transition: opacity .5s ease-out;
+  z-index: 100;
+}
+
+.hambLine {
+  background-color: white;
+  height: 3px;
+  position: relative;
+  width: 50px;
+}
+
+.firstLine {
+  margin-bottom: 10px;
+  transition: top .25s, transform .25s;
+}
+
+.lastLine {
+  margin-top: 10px;
+  transition: bottom .25s, transform .25s;
+}
+
+.firstLine-clicked {
+  top: 13px;
+  transform: rotate(45deg);
+}
+
+.middleLine-clicked {
+  visibility: hidden;
+}
+
+.lastLine-clicked {
+  bottom: 12px;
+  transform: rotate(-45deg);
+}
+
+.nav {
+  background-color: black;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  transition: opacity .5s, visibility .5s;
+  width: 100%;
+  z-index: 99;
+  visibility: hidden;
+}
+
+#nav-background-image {
+  height: 100%;
+  left: -175px;
+  position: absolute;
+  top: 0;
+  max-width: 1000px;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  left: -25%;
+  opacity: 0;
+  position: relative;
+  transition: all .2s ease-out;
+  visibility: hidden;
+}
+
+a.nav-item {
+  color: white;
+  text-decoration: none;
+}
+
+a.nav-item:hover {
+  opacity: 1;
+}
+
+.nav-item.nav-item-visible {
+  opacity: .7;
+  transform: translateX(25%);
+  visibility: visible;
+}
+
+.nav-hover-overlay {
+  background-color: black;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity .25s;
+  width: 100vw;
+  z-index: 98;
+}
+
+.nav-content-visible:hover ~ .nav-hover-overlay {
+  opacity: .75;
+}
+
+/* MAIN CONTENT */
+main {
+  position: relative;
+  top: 100vh;
+  /* z-index: 2; */
+}
+
+.topLogo {
+  background-color: black;
+  border-bottom: 1px solid gray;
+  opacity: 0;
+  position: fixed;
+  text-align: center;
+  top: -50px;
+  transition: transform .5s, opacity 1s;
+  width: 100%;
+  z-index: 99;
+}
+
+.topLogo-visible {
+  opacity: 1;
+  transform: translateY(50px);
+}
+
+.topLogo img {
+  height: 45px;
+}
+
+/* ABOUT */
+#about {
+
+}
+
+#aboutGradient { 
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%);
+  height: 100%;
+  width: 100%;
+}
+
+#bioTextContainer {
+  background-color: rgba(0,0,0,.75); 
+  transform: translateY(-7vw);
+}
+
+#bioText {
+  max-width: 1500px;
+  text-align: center;
+}
+
+/* #RELEASES */
+.releases-list li {
+  position: relative;
+}
+
+.release-card {
+  width: 250px;
+}
+
+/* HELPERS */
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mbAlot {
+  margin-bottom: 32rem;
+}
+
+.backToTop {
+  animation: back2top 2s infinite ease-in-out;
+  bottom: 25px;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  padding: 0 10px;
+  position: fixed;
+  right: -50px;
+  transition: all .5s;
+  z-index: 3;
+}
+
+.backToTop-visible {
+  opacity: 1;
+  right: 15px;
+}
+
+.rotate-20 {
+  transform: rotate(20deg);
+}
+
+@keyframes back2top {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* CUSTOM AOS */
+[data-aos="fade-out"] {
+  opacity: 1 !important;
+  transition-property: opacity;
+}
+
+[data-aos="fade-out"].aos-animate {
+  opacity: 0 !important;
+}
+
+/* [data-aos] {
+  visibility: hidden;
+}
+[data-aos].aos-animate {
+  visibility: visible;
+} */
+
+/* SHOWS SECTION */
+.show-tickets-button {
+  -webkit-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+  transform: skew(-20deg);
+}
+
+/* footer  */
+footer {
+  background-color: white;
+  display: block;
+  width: 100%;
+}
+
+footer a {
+  color: unset;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 30rem) {
+  .f25-s {
+    font-size: 1.9rem;
+  }
+
+  .hamburgerNav {
+    left: 5px;
+    top: 5px;
+  }
+
+  .hambLine {
+    height: 2px;
+    position: relative;
+    width: 40px;
+  }
+
+  .topLogo {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    text-align: right;
+  }
+
+  .topLogo-visible {
+    transform: translateY(50px);
+  }
+}
+
+@media only screen and (min-width: 30rem) {
+  #nav-background-image {
+    left: -100px;
+  }
+
+  #introLogo {
+    width: 330px;
+  }
+
+  .mainLogo {
+    width: 330px;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  .about-offset {
+    transform: translateY(-35%);
+  }
+
+  .releases-list li:nth-child(even) {
+    left: 15%;
+  }
+  .releases-list li:nth-child(odd) {
+    right: 15%;
+  }
+
+  #nav-background-image {
+    max-width: unset;
+    width: 100%;
+  }
+
+  .release-card {
+    width: 350px;
+  }
+}

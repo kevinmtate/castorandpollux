@@ -1,0 +1,116 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+.contact {
+	background-color: #020202;
+	color: #fff;
+	padding: 56px 0;
+
+	@include tablet {
+		padding: 56px 0;
+	}
+
+	@include desktop {
+		padding: 64px 0;
+	}
+
+	&__header {
+		text-align: center;
+		padding-bottom: 40px;
+		@include h1-mobile;
+		text-transform: uppercase;
+
+		@include tablet {
+			padding-bottom: 48px;
+			@include h1-tablet__desk;
+		}
+
+		@include desktop {
+			padding-bottom: 32px;
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		gap: 56px;
+		height: 360px;
+
+		@include tablet {
+			gap: 76px;
+			height: 500px;
+		}
+
+		@include custom(1105px) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			gap: 64px;
+		}
+
+		@include desktop {
+			// gap: 64px;
+		}
+
+		&--logo {
+			// styles for contact__container--logo
+			width: 80px;
+			height: fit-content;
+
+			@include tablet {
+				width: 100px;
+				// order: 2;
+			}
+		}
+
+	}
+
+	&__container-column {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 24px;
+		width: auto;
+
+		@include tablet {}
+
+		@include custom(1105px) {
+			width: 36%;
+		}
+
+		@include desktop {
+			width: 600px;
+		}
+
+		&--header {
+			@include h2-mobile;
+
+			@include tablet {
+				@include h2-tablet__desk;
+			}
+
+			@include desktop {}
+		}
+
+		&--text {
+			@include p-mobile;
+
+			@include tablet {
+				@include p-tablet__desk;
+				font-size: 20px;
+			}
+		}
+
+		&--link {
+			text-decoration: underline;
+			@include p-mobile;
+
+			@include tablet {
+				@include p-tablet__desk;
+				font-size: 20px;
+			}
+		}
+	}
+}
