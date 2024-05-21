@@ -1,46 +1,7 @@
 import './SignUpForm.scss';
-import { useState, useEffect } from 'react';
 
-type FormData = {
-	firstName: string,
-	lastName: string
-	email: string,
-	zipcode: string
-}
 
-const SignUpForm = () => {
-	const [formData, setFormData] = useState({} as FormData);
-
-	const handleSubmit = (e: any) => {
-		e.preventDefault();
-		const form = e.target;
-
-		const userFormData: FormData = {
-			firstName: form.firstName.value,
-			lastName: form.lastName.value,
-			email: form.email.value,
-			zipcode: form.zipcode.value
-		};
-
-		if (userFormData.firstName === '' || userFormData.lastName === '' || userFormData.email === '' || userFormData.zipcode === '') {
-			alert('Please fill out all required fields');
-			return;
-		}
-
-		// const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-		// if (!emailRegex.test(userFormData.email)) {
-		// 	alert('Please enter a valid email');
-		// 	return;
-		// }
-
-		setFormData(userFormData);
-		alert('Thank you for signing up!');
-	}
-
-	useEffect(() => {
-
-	}, [formData]);
-
+export default function SignUpForm() {
 
 	return (
 		<section className='signup'>
@@ -48,5 +9,3 @@ const SignUpForm = () => {
 		</section>
 	)
 }
-
-export default SignUpForm
