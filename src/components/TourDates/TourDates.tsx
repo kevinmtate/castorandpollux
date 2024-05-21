@@ -1,12 +1,9 @@
-// import EventEntry from '../EventEntry/EventEntry';
 import './TourDates.scss';
 import { useState, useEffect } from 'react';
-
-import eventData from '../../data/events.json';
 import BandsInTownWidget from '../BandsInTownWidget/BandsInTownWidget';
 
-const TourDates = () => {
-	const [active, setActive] = useState();
+
+export default function TourDates() {
 
 	useEffect(() => {
 		// Dynamically create a script tag for Bandsintown
@@ -29,10 +26,5 @@ const TourDates = () => {
 			<h2 className="tourdates__header">Tour Dates</h2>
 			<BandsInTownWidget />
 		</section>
-
-
-
 	)
 }
-
-export default TourDates
