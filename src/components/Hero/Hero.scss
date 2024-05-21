@@ -2,46 +2,37 @@
 @import '../../styles/partials/mixins';
 
 .hero {
-	// overflow: hidden;
 	min-height: calc(100vh - 114.71px);
-	// object-fit: cover;
 	background-color: #000;
 	width: 100%;
 
-	@include tablet {
-		// min-height: 100vh;
-		// min-height: calc(100vh - 114.71px);
-	}
+	@include tablet {}
 
-	@include desktop-header {
-		// min-height: 100vh;
-	}
+	@include desktop-header {}
 
 	@include desktop {}
 
 	&__video {
 		min-height: calc(100vh - 89.054px);
-		// height: 100%;
 		width: 100%;
 		object-fit: cover;
 
 		@include tablet {
 			min-height: calc(100vh - 99.313px);
 			max-height: calc(100vh - 99.313px);
-			// min-height: calc(100dvh - 114.71px);
-			// min-height: 100vh;
 		}
 
 		@include desktop-header {
-			// min-height: calc(100vh - 99.313px);
 			min-height: calc(100vh - 114.71px);
 			max-height: calc(100vh - 114.71px);
-			// min-height: 100vh;
 		}
 
-		@include desktop {
-			// min-height: calc(100vh - 114.71px);
-			// min-height: 100vh;
-		}
+		@include desktop {}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero__video {
+		display: none;
 	}
 }
