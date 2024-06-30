@@ -1,0 +1,129 @@
+@import '../../styles/partials/mixins';
+
+.tourdates {
+	background-color: black;
+	background-image: url('../../assets/images/miscellaneous/DSC02298.jpeg');
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	padding: 44px 28px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	@include desktop {
+		padding: 64px 64px;
+	}
+
+	&__header {
+		text-transform: uppercase;
+		@include h1-mobile;
+		font-size: 28px;
+
+		@include tablet {
+			@include h1-tablet__desk;
+		}
+
+		@include desktop {}
+	}
+
+	&__follow-container {
+		padding: 20px 0;
+		// max-width: 1500px;
+
+		&--subheader {
+			font-weight: bolder;
+			font-size: 24px;
+		}
+
+		&--follow-button {
+			font-weight: bolder;
+			font-size: 18px;
+			padding: 30px;
+		}
+	}
+
+	&__events-container {
+		width: 100%;
+		max-width: 1500px;
+
+		&--upcoming {
+			margin: 0 8px;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+		margin: 0 8px;
+		gap: 12px;
+		border-bottom: 1px solid #fff;
+		font-size: 14px;
+		font-weight: bold;
+
+		@include tablet {
+			justify-content: left;
+		}
+	}
+
+}
+
+.divider {
+	font-size: 18px;
+}
+
+.bit-widget,
+.bit-layout-ipad,
+.bit-widget .bit-layout-ipad {
+	background-color: unset !important;
+	color: #fff !important;
+}
+
+.bit-follow-section-heading-text,
+.bit-event,
+.bit-venue,
+.bit-play-my-city-heading-text {
+	color: #fff !important;
+	@include montserrat-font;
+}
+
+.bit-play-my-city-heading-text {
+	font-weight: 800;
+}
+
+.bit-widget-container {
+	@include desktop {
+		max-width: 1500px !important;
+		width: 100% !important;
+	}
+}
+
+.bit-social-share-icon-wrapper svg path {
+	fill: #fff !important;
+
+}
+
+.bit-location {
+	@include desktop {
+		transform: translateY(100%);
+	}
+}
+
+.bit-widget-container,
+.tourdates__header {
+	z-index: 1;
+}

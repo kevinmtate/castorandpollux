@@ -1,0 +1,34 @@
+[
+	{
+		"site": "Spotify",
+		"siteLink": "https://open.spotify.com/artist/6fHUILCpBvfSHB48AEciPG?si=SQQEFDC-RrKzxtKizT5HHg&nd=1&dlsi=a21d5c44637f4ab0"
+	},
+	{
+		"site": "Soundcloud",
+		"siteLink": "https://soundcloud.com/castorandpollux_music"
+	},
+	{
+		"site": "Facebook",
+		"siteLink": "https://www.facebook.com/candpmusic/"
+	},
+	{
+		"site": "Instagram",
+		"siteLink": "https://www.instagram.com/castorandpolluxmusic/"
+	},
+	{
+		"site": "Twitter",
+		"siteLink": "https://twitter.com/candpmusic"
+	},
+	{
+		"site": "Youtube",
+		"siteLink": "https://www.youtube.com/channel/UCp2BJQiRN36uNGac76eAS6A?view_as=subscriber"
+	},
+	{
+		"site": "Twitch",
+		"siteLink": "https://www.twitch.tv/castorandpolluxmusic"
+	},
+	{
+		"site": "TikTok",
+		"siteLink": "https://www.tiktok.com/@castorandpolluxmusic"
+	}
+]

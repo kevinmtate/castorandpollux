@@ -1,0 +1,154 @@
+@import '../../styles/partials/mixins';
+
+.signup {
+	background-color: #0f0f0f;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 44px 28px;
+
+	@include desktop {
+		padding: 54px 64px;
+	}
+
+	&__header {}
+
+}
+
+.signup-form {
+	width: 100%;
+	max-width: 1500px;
+
+
+	&__fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__top-container {
+		@include tablet {
+			display: flex;
+			gap: 8px;
+		}
+
+		&--sub-label {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 12px;
+			gap: 4px;
+			width: 100%;
+			font-size: 14px;
+			font-weight: lighter;
+		}
+
+		&--input {
+			background-color: #fff;
+			height: 50px;
+			padding: 0 8px;
+			color: #000;
+			border: 3px solid #0f0f0f;
+			font-size: 14px;
+			font-weight: normal;
+			transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+
+			&:hover {
+				background-color: rgb(162, 162, 162);
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 2px #fff;
+			}
+		}
+
+
+	}
+
+	&__label {
+		font-size: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		margin-bottom: 12px;
+		width: 100%;
+
+		&--legend {
+			padding-bottom: 14px;
+		}
+	}
+
+	&__input {
+		background-color: #fff;
+		height: 50px;
+		padding: 0 8px;
+		color: #000;
+		border: 3px solid #0f0f0f;
+		font-size: 14px;
+		font-weight: normal;
+		transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+
+		&:hover {
+			background-color: rgb(162, 162, 162);
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 2px #fff;
+		}
+	}
+
+	&--submit-btn {
+		@include button;
+		margin-top: 16px;
+		width: 100%;
+
+		@include tablet {
+			// margin: 16px 0 0 0;
+		}
+	}
+}
+
+.label {
+	&__padding {
+		padding: 0 2px;
+	}
+
+	&__required {
+		margin-left: 8px;
+		color: #9f9f9f;
+		font-size: 13px;
+	}
+}
+
+.iframe {
+	border: none;
+	overflow: hidden;
+}
+
+iframe.iframe {
+	height: 360px;
+	overflow: hidden;
+
+	@include tablet {
+		height: 290px;
+	}
+
+	@include desktop {
+		height: 220px;
+	}
+}
+
+iframe html {
+	overflow: hidden;
+}
+
+iframe html .newsletter-header {
+	@include montserrat-font;
+	font-size: 40px;
+}
+
+.container-center,
+.layout-wide-center {
+	background-color: unset !important;
+	color: #FFF !important;
+}

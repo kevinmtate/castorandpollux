@@ -1,0 +1,81 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+.header {
+	background-color: #FFF;
+	padding: 0 24px;
+
+	@include tablet {
+		padding: 0 40px;
+	}
+
+	@include desktop-header {
+		max-height: 114.71px;
+	}
+
+	&-nav {
+		padding: 24px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+
+		&__main-nav {
+			display: none;
+
+			@include desktop {
+				display: flex;
+				width: 30%;
+				gap: 16px;
+			}
+
+			&--link {
+				font-size: 18px;
+				width: 80px;
+				text-align: center;
+
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+
+		&__logo {
+			@include desktop {
+				// position: absolute;
+				// top: 50%;
+				// left: 50%;
+			}
+
+			&--img {
+				max-width: 160px;
+				filter: invert(100%);
+
+				@include tablet {
+					max-width: 200px;
+				}
+
+				@include desktop {
+					max-width: 260px;
+				}
+			}
+		}
+
+		&__social-nav {
+			display: none;
+
+			@include desktop {
+				display: flex;
+				align-items: center;
+				justify-content: right;
+				width: 30%;
+				gap: 16px;
+			}
+		}
+	}
+}
+
+.active {
+	font-weight: bold;
+	text-decoration: underline;
+}

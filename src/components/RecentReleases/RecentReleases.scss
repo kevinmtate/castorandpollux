@@ -1,0 +1,219 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+.recent {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 32px 0;
+	position: relative;
+
+	@include tablet {
+		padding: 40px 0;
+	}
+
+	@include desktop-header {
+		// min-height: 100vh;
+	}
+
+	@include desktop {
+		padding: 64px 32px;
+	}
+
+	&__header {
+		text-align: center;
+		margin-bottom: 24px;
+		@include h1-mobile;
+		font-size: 28px;
+		text-transform: uppercase;
+
+		@include tablet {
+			margin-bottom: 32px;
+			@include h1-tablet__desk;
+		}
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
+	}
+
+
+	&__releases {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-bottom: 24px;
+
+		@include tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-bottom: 32px;
+		}
+
+		@include desktop-header {}
+
+		@include desktop {
+			flex-wrap: nowrap;
+			margin-bottom: 40px;
+		}
+
+		&--card {
+			max-width: 100%;
+			// position: relative;
+
+			@include tablet {
+				// width: 40%;
+				// max-width: 40%;
+			}
+
+			@include desktop {
+				// width: 300px;
+			}
+		}
+
+		&--click-area {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 352px;
+			cursor: pointer;
+			width: 300px;
+
+			@include tablet {}
+
+			@include desktop {}
+		}
+	}
+
+	&__releases-container {
+		position: relative;
+		z-index: 0;
+
+		@include tablet {
+			width: 40%;
+		}
+	}
+}
+
+.soundcloud {
+	width: 100%;
+	max-width: 1200px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include tablet {
+		padding: 0 60px;
+	}
+
+	&__iframe {
+		margin-bottom: 32px;
+	}
+
+	&__button {
+		@include button;
+		border-width: 0 1px;
+		font-weight: 400;
+		transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+		@include desktop {
+			font-size: 18px;
+		}
+
+		&:hover {
+			border-width: 0 1px;
+			background-color: rgba(227, 227, 227, 0.6); // 
+			color: #000;
+		}
+
+		&--open {
+			@include button;
+			border-width: 0 1px;
+			font-size: 24px;
+			overflow: hidden;
+			transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+			@include tablet {
+				font-size: 28px;
+			}
+
+			@include desktop {
+				font-size: 30px;
+			}
+
+			&:hover {
+				border-width: 0 1px;
+				background-color: rgba(227, 227, 227, 0.6); // 
+				color: #000;
+			}
+		}
+	}
+}
+
+// Soundcloud Animations
+.ani-expand {
+	animation: expand 0.8s ease-in-out forwards;
+	// margin-bottom: 40px;
+}
+
+.ani-contract {
+	animation: contract 0.8s ease-in-out forwards;
+}
+
+// Button Animations
+.button-show {
+	animation: button-show 0.8s ease-in-out forwards;
+}
+
+.button-hide {
+	animation: button-hide 0.8s ease-in-out forwards;
+}
+
+@keyframes expand {
+	0% {
+		max-height: 0;
+	}
+
+	100% {
+		max-height: 600px;
+	}
+}
+
+@keyframes contract {
+	0% {
+		max-height: 600px;
+	}
+
+	100% {
+		max-height: 0;
+	}
+}
+
+
+@keyframes button-show {
+	0% {
+		max-height: 0;
+		margin: 0;
+	}
+
+	100% {
+		max-height: 24px;
+	}
+}
+
+@keyframes button-hide {
+	0% {
+		max-height: 24px;
+	}
+
+	100% {
+		max-height: 0;
+		margin: 0;
+	}
+}

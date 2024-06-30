@@ -1,0 +1,6 @@
+@import './variables.scss';
+@import './mixins';
+
+body {
+	@include montserrat-font;
+}
