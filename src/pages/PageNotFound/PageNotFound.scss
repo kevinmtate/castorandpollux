@@ -1,0 +1,32 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+.page-not-found {
+	background-color: #020202;
+	color: #fff;
+	min-height: 60vh;
+	padding: 56px 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 16px;
+
+	&__title {
+		@include h1-mobile;
+		text-transform: uppercase;
+
+		@include tablet {
+			@include h1-tablet__desk;
+		}
+	}
+
+	&__text {
+		@include p-mobile;
+
+		@include tablet {
+			@include p-tablet__desk;
+		}
+	}
+}

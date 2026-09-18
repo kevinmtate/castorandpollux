@@ -1,6 +1,7 @@
 {
-	"name": "react-castorandpollux",
+	"name": "castorandpollux",
 	"version": "0.1.0",
+	"homepage": "/",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",
@@ -19,8 +20,11 @@
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
+		"postbuild": "cp build/index.html build/404.html",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
@@ -44,5 +48,8 @@
 	},
 	"compilerOptions": {
 		"jsx": "react"
+	},
+	"devDependencies": {
+		"gh-pages": "^6.1.1"
 	}
 }

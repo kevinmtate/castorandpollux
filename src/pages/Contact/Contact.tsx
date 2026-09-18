@@ -14,7 +14,7 @@ const Contact = () => {
 						<h3 className="contact__container-column--header">Castor & Pollux</h3>
 						<p className="contact__container-column--text">Promos/Demos</p>
 						<a
-							href="castorandpollux@castorandpolluxofficial.com"
+							href="mailto:castorandpollux@castorandpolluxofficial.com"
 							className="contact__container-column--link"
 						>
 							castorandpollux@castorandpolluxofficial.com
@@ -25,11 +25,18 @@ const Contact = () => {
 						<h3 className="contact__container-column--header">MGMT</h3>
 						<p className="contact__container-column--text">Bookings/General Inquiries</p>
 						<a
-							href="mgmt@castorandpolluxofficial.com"
+							href="mailto:mgmt@castorandpolluxofficial.com"
 							className="contact__container-column--link"
 						>
-							madeleine@88musicmgmt.com
+							mgmt@castorandpolluxofficial.com
 						</a>
+							<h3 className="contact__container-column--header">Bookings</h3>
+							<a
+								href="mailto:stephen@output.fm"
+								className="contact__container-column--link"
+							>
+								stephen@output.fm
+							</a>
 					</aside>
 				</div>
 
